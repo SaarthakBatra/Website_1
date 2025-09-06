@@ -53,10 +53,10 @@
             }
         </style>  
         <!-- Navigation Bar -->
-        <div class="navigation-top">
+        <!-- <div class="navigation-top">
             <nav aria-label="Main navigation">
                 <ul>
-                    <!-- Logo as home link -->
+                    <!== Logo as home link ==>
                     <li>
                         <a href="home" aria-label="Asphaltic Science - Go to homepage">
                             <div class="logo2">
@@ -68,7 +68,7 @@
                         </a>
                     </li>
                     
-                    <!-- Navigation Links -->
+                    <!== Navigation Links ==>
                     <li class="nav-link"><a href="2">About Us</a></li>
                     <li class="nav-link"><a href="4">Our Values</a></li>
                     <li class="nav-link"><a href="6">Our Services</a></li>
@@ -77,16 +77,16 @@
                     <li class="nav-button"><a href="8">Request Consultation</a></li>
                 </ul>
             </nav>
-        </div>
+        </div> -->
 
         <!-- Loading Screen -->
-        <div id="LoadingPage" class="page bgColor4" style="position: fixed; top: 0; left: 0; transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); z-index: 5000;">
-            <!-- Normal Loading Counter -->
+        <!-- <div id="LoadingPage" class="page bgColor4" style="position: fixed; top: 0; left: 0; transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); z-index: 5000;">
+            <!== Normal Loading Counter ==>
             <div id="normalLoading" class="wrapper" style="justify-content: start; align-items: end;">
                 <div class="loading-counter" style="font-size: clamp(5rem, 10vw, 10rem); padding: 0 30px;">0%</div>
             </div>
             
-            <!-- Mobile Warning Message -->
+            <!== Mobile Warning Message ==>
             <div id="mobileWarning" class="wrapper" style="display: none; flex-direction: column; justify-content: center; align-items: center; padding: 30px; text-align: center;">
                 <div style="background: rgba(255,255,255,0.1); border-radius: 15px; padding: 40px; max-width: 500px; backdrop-filter: blur(10px);">
                     <h2 style="color: var(--fontColor1); margin-bottom: 20px; font-size: clamp(1.5rem, 4vw, 2.5rem);">Desktop View Required</h2>
@@ -105,7 +105,8 @@
                     ">Accept</button>
                 </div>
             </div>
-        </div>
+        </div> -->
+        
         <!-- Page 1 (Landing Page) -->
         <style>
             :root {
@@ -269,6 +270,7 @@
                 </div>
             </div>
         </div>
+        
         <!-- Page 2 + Page 3 (About Us + Our Values) -->
         <style>
             :root {
@@ -375,9 +377,9 @@
                 42%, 100% {opacity: 0;}
             }
         </style>
-        <div class="page snap_checkpoint scroll_snap" data-checkpoint="1" data-speed="1000" style="view-timeline-name: --section2; height: var(--page2_height); z-index: 0; overflow: visible;">
+        <!-- <div class="page snap_checkpoint scroll_snap" data-checkpoint="1" data-speed="1000" style="view-timeline-name: --section2; height: var(--page2_height); z-index: 0; overflow: visible;">
             <div class="wrapper" style="grid: repeat(auto-fit, 100vh) / 1fr;">
-                <!-- Background Clouds -->
+                <!== Background Clouds ==>
                 <div class="container" style="grid-area: 1/1/7/2; z-index: 0; overflow: visible;">
                     <div class="wrapper" style="place-items: start;">
                         <div class="page" style="grid-area: 1/1/2/2; position: sticky; top: 0; left: 0; background: var(--palette1_Color6)">
@@ -389,26 +391,26 @@
                     </div>
                 </div>
 
-                <!-- About Us -->
+                <!== About Us ==>
                 <div class="container" style="grid-area: 1/1/4/2; z-index: 10; overflow: visible;">
                     <div class="wrapper" style="place-items: start;">
                         <div class="page" style="position: sticky; top: 0; left: 0; animation: page1Animation linear forwards; animation-timeline: --section2; animation-range: enter 0% enter 100%;">
                             <div class="wrapper" style="grid: var(--navigation_height) auto 1fr / 25vw 1fr 25vw;">
-                                <!-- Worker Drilling -->
+                                <!== Worker Drilling ==>
                                 <div class="wrapper" style="grid-area: 2/1/4/2; align-items: end; justify-items: start; animation: workerAnimation linear forwards; animation-timeline: --section2; animation-range: enter 0% enter 100%;">
                                     <img src="./assets/page2/Drill_worker.png" alt="Drill Worker" style="max-width: 200%; min-height: 60%; align-self: end; justify-self: start; transform: translate(-5%, 5%);">
                                 </div>
-                                <!-- Worker Working -->
+                                <!== Worker Working ==>
                                 <div class="container" style="grid-area: 2/3/4/4; object-fit: cover;">
                                     <div class="wrapper" style="grid-area: 1/1/2/2; width: 120%; background-image: url(./assets/page2/Worker2.png); background-repeat: no-repeat; background-position: top left; background-size: cover;"></div>
                                 </div>
-                                <!-- Heading -->
+                                <!== Heading ==>
                                 <div class="container" style="grid-area: 2/1/3/4; align-self: start; grid: 1fr 1fr / auto 1fr; width: fit-content; height: fit-content; animation: headingAnimation linear forwards; animation-timeline: --section2; animation-range: enter 0% enter 100%; color: var(--palette1_Color3);">
                                     <p class="wrapper fontXXXXL" style="grid-area: 1/1/3/2; line-height: 0; font-weight: 600;">A</p>
                                     <p class="wrapper fontXXXL" style="grid-area: 1/2/2/3; font-weight: 100; align-items: center; justify-items: start; line-height: 0; transform: translateX(-5%);">bout</p>
                                     <p class="wrapper fontXXL" style="grid-area: 2/2/3/3;">sphaltic Science</p>
                                 </div>
-                                <!-- Content -->
+                                <!== Content ==>
                                 <div class="container" style="grid-area: 3/2/4/3; grid: auto 1fr / 1fr;">
                                     <div class="wrapper textJustify fontS" style="place-items: start; padding: 20px 0; color: var(--palette1_Color2);  animation: paraAnimation linear forwards; animation-timeline: --section2; animation-range: enter 0% enter 100%;">
                                         <p>
@@ -434,17 +436,17 @@
                         </div>
                     </div>
                 </div>
-                <!-- About Us Checkpoint -->
+                <!== About Us Checkpoint ==>
                 <div id="AboutUs" class="page snap_checkpoint scroll_snap" data-checkpoint="2" data-speed="1000" style="grid-area: 2/1/3/2; z-index: 1;">
                     <div class="wrapper page-detector" data-page="AboutUs" style="grid: var(--navigation_height) 1fr / 30% 1fr 30%;"></div>
                 </div>
 
-                <!-- Our Values -->
+                <!== Our Values ==>
                 <div class="container snap_checkpoint scroll_snap" data-checkpoint="3" data-speed="1000" style="grid-area: 3/1/7/2; isolation: isolate; z-index: 20; overflow: visible;">
                     <div class="wrapper" style="place-items: start;">
                         <div class="page" style="position: sticky; top: 0; left: 0; animation: page2Animation linear forwards; animation-timeline: --section2; animation-range: enter 0% enter 100%;">
                             <div class="wrapper" style="grid: var(--navigation_height) auto 1fr auto / repeat(4, 1fr);">
-                                <!-- Heading -->
+                                <!== Heading ==>
                                 <div class="container" style="grid-area: 2/1/3/5;">
                                     <div class="wrapper">
                                         <div class="container" style="grid-area: 2/1/3/5; grid: 1fr / repeat(4, min-content); width: min-content; height: min-content; place-items: end; animation: headingAnimation2 linear forwards; animation-timeline: --section2; animation-range: enter 0% enter 100%; color: var(--palette1_Color3);">
@@ -454,7 +456,7 @@
                                         </div>
                                     </div>
                                 </div>                                
-                                <!-- Cards -->
+                                <!== Cards ==>
                                 <div class="container" style="grid-area: 3/1/4/2; animation: card1Animation linear forwards; animation-timeline: --section2; animation-range: enter 0% enter 100%;">
                                     <div class="wrapper textJustify" style="grid: 30vh 1fr / 1fr; color: var(--palette1_Color2);">
                                         <div class="container">
@@ -555,7 +557,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Scroll Button -->
+                                <!== Scroll Button ==>
                                 <div class="container" style="grid-area: 4/1/5/5;">
                                     <div class="wrapper" style="padding-bottom: 3.75%;">
                                         <a href="5" class="scroll_button_2">
@@ -570,13 +572,13 @@
                         </div>
                     </div>
                 </div>
-                <!-- Our Values Checkpoint -->
+                <!== Our Values Checkpoint ==>
                 <div id="OurValues" class="page snap_checkpoint scroll_snap" data-checkpoint="4" data-speed="1000" style="grid-area: 6/1/7/2; z-index: 1;">
                     <div class="wrapper page-detector" data-page="OurValues" style="grid: var(--navigation_height) 1fr / 30% 1fr 30%;">
 
                     </div>
                 </div>
-                <!-- Peak Window with Curtains -->
+                <!== Peak Window with Curtains ==>
                 <div class="container" style="grid-area: 1/1/6/2; isolation: isolate; z-index: 100;  overflow: visible;  animation: cloudContainer linear forwards; animation-timeline: --section2; animation-range: enter 0% enter 100%;">
                     <div class="wrapper" style="place-items: start;">
                         <div class="page" style="grid-area: 1/1/2/2; position: sticky; top: 0; left: 0; z-index: 100;">
@@ -590,7 +592,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Page 4 + Page 5 (Service History + Our Services) -->
         <style>
@@ -646,7 +648,7 @@
                 50% { transform: translateX(0%);}
             }
         </style>
-        <div class="page snap_checkpoint scroll_snap" data-checkpoint="5" data-speed="600" style="height: var(--page4_height); background-color: var(--palette1_Color4); view-timeline-name: --section3; z-index: 0; overflow: visible;">
+        <!-- <div class="page snap_checkpoint scroll_snap" data-checkpoint="5" data-speed="600" style="height: var(--page4_height); background-color: var(--palette1_Color4); view-timeline-name: --section3; z-index: 0; overflow: visible;">
             <div class="wrapper" style="grid: 1fr 1fr / 1fr; place-items: start;">
                 <div class="page" style="position: sticky; top: 0; left: 0;">
                     <div class="wrapper">
@@ -707,7 +709,7 @@
                                                 <p class="fontXXL fontWeight400">Explore Our Comprehensive Asphalt Testing Services</p>
                                             </div>
                                         </div>
-                                        <!-- Scroll Button -->
+                                        <!== Scroll Button ==>
                                         <div class="container">
                                             <div class="wrapper">
                                                 <div class="container">
@@ -890,7 +892,7 @@
                                         </div>
                                         <div class="container">
                                             <div class="wrapper">
-                                                <!-- Call to Action Button -->
+                                                <!== Call to Action Button ==>
                                                 <div class="container">
                                                     <div class="wrapper">
                                                         <button class="button_1 contactUs">
@@ -919,7 +921,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- Scroll Button -->
+                                        <!== Scroll Button ==>
                                         <div class="container">
                                             <div class="wrapper" style="padding: 20px 0;">
                                                 <a href="7" class="scroll_button_2">
@@ -937,12 +939,12 @@
                     </div>
                 </div>
                 
-                <!-- Our Services Checkpoint -->
+                <!== Our Services Checkpoint ==>
                 <div id="OurServices" class="page snap_checkpoint scroll_snap" data-checkpoint="6" data-speed="2000" style="grid-area: 2/1/3/2; z-index: -1;">
                     <div class="wrapper page-detector" data-page="OurServices"></div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Page 6 (Our Team) -->
         <style>
@@ -972,11 +974,11 @@
                 50%, 100% { opacity: 1; transform: translateY(0%);}
             }
         </style>
-        <div id="OurTeam" class="page snap_checkpoint scroll_snap" data-checkpoint="7" data-speed="1000" style="view-timeline-name: --section4;">
+        <!-- <div id="OurTeam" class="page snap_checkpoint scroll_snap" data-checkpoint="7" data-speed="1000" style="view-timeline-name: --section4;">
             <div class="wrapper page-detector" data-page="OurTeam" style="grid: var(--navigation_height) 1fr / 1fr;  background-color: var(--palette1_Color7);">
                 <div class="container" style="grid-area: 2/1/3/2;">
                     <div class="wrapper" style="grid: auto 1fr auto / 1fr;">
-                        <!-- Heading -->
+                        <!== Heading ==>
                          <div class="container">
                             <div class="wrapper">
                                 <div class="container" style="grid: 1fr / repeat(3, max-content); width: min-content; height: min-content; place-self: start; place-items: end; color: var(--palette1_Color2); padding-bottom: 10px;  animation: headingAnimation_OurTeam linear forwards; animation-timeline: --section4; animation-range: enter 0% enter 100%;">
@@ -987,10 +989,10 @@
                             </div>
                          </div>
                         
-                        <!-- Team Cards -->
+                        <!== Team Cards ==>
                         <div class="container" style="padding:10px">
                             <div class="wrapper" style="grid: 1fr / repeat(auto-fit, minmax(200px, 1fr)); column-gap: 5px;">
-                                <!-- Employee Cards -->
+                                <!== Employee Cards ==>
                                 <div class="container" style="animation: card1Animation_OurTeam linear forwards; animation-timeline: --section4; animation-range: enter 0% enter 100%;">
                                     <div class="wrapper" style="grid: 1fr 1fr / 1fr;">
                                         <div class="container">
@@ -1058,10 +1060,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Page 7 (Contact Us) -->
-        <div class="page snap_checkpoint scroll_snap" data-checkpoint="8" data-speed="600">
+        <!-- <div class="page snap_checkpoint scroll_snap" data-checkpoint="8" data-speed="600">
             <div class="wrapper" style="grid: var(--navigation_height) 1fr auto / 1fr; background-color: var(--palette1_Color7);">
                 <div class="container" style="grid-area: 2/1/3/2; padding: 5%">
                     <div class="wrapper" style="grid: 1fr / 1fr 1fr; background-color: white; border-radius: 30px; overflow: hidden; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
@@ -1130,19 +1132,19 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Page 8 (Announcements & Footer) -->
-        <div id="Announcement" class="page snap_checkpoint scroll_snap" data-checkpoint="end" data-speed="600">
+        <!-- <div id="Announcement" class="page snap_checkpoint scroll_snap" data-checkpoint="end" data-speed="600">
             <div class="wrapper page-detector" data-page="Announcement" style="grid: var(--navigation_height) 1fr 50px / 1fr;  background-color: var(--palette1_Color4);">
                 <div class="container" style="grid-area: 2/1/3/2;">
                     <div class="wrapper" style="grid: auto 1fr / 1fr;">
-                        <!-- Heading -->
+                        <!== Heading ==>
                         <div class="container" style="grid: 1fr / repeat(2, min-content); width: min-content; height: min-content; place-self: start; place-items: end; color: var(--palette1_Color3); padding-bottom: 10px;">
                             <p class="fontXXXXL" style="place-items: end; font-weight: 600; line-height: 80%;">A</p>
                             <p class="fontXXL" style="place-items: end;">nnouncements</p>
                         </div>
-                        <!-- Announcements -->
+                        <!== Announcements ==>
                          <div class="container">
                             <div class="wrapper" style="grid: auto / 1fr; place-items: start;">
                                 <div class="container" style="max-height: 200px; border: 3px solid var(--palette1_Color5); color: var(--palette1_Color2); padding: 0 2.5%;">
@@ -1171,7 +1173,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         
         <script src="./scripts/main.js" defer type="module"></script>
     </body>
