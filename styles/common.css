@@ -1,0 +1,1108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    /*----------------- Global Configuration -----------------*/
+    --palette1_Color1: #183c6c;
+    --palette1_Color2: #506BA0;
+    --palette1_Color3: #E4F0FF;
+    --palette1_Color4: #D7A31A;
+
+    --palette2_Color1: #183c6c;
+    --palette2_Color2: #4191F9;
+    --palette2_Color3: #F4F9FF;
+    --palette2_Color4: #FFF7D6;
+
+    --Color1: white;
+    --Color2: black; 
+    --Color3: #D7D7D7;
+    --Color4: #dbebf9;
+    --Color5: rgb(80,80,80);
+    --Color6: rgb(69,69,69);
+    
+    --fontColor1: white;
+    --fontColor2: rgb(80,80,80);
+    --fontColor3: var(--palette1_Color2);
+
+    --fontXXXXL: clamp(4.5rem, 10vw + .5rem, 10.75rem);
+    --fontXXXL: clamp(2.25rem, 5vw + .5rem, 4.75rem);
+    --fontXXL: clamp(2rem, 4vw + .5rem, 3.75rem);
+    --fontXL: clamp(1.75rem, 3vw + .5rem, 2.75rem);
+    --fontL: clamp(1.5rem, 2vw + .5rem, 2.25rem);
+    --fontM: clamp(1rem, 1vw + .5rem, 1.25rem);
+    --fontS: clamp(0.5rem, 0.75vw + .5rem, 1rem);
+    --fontXS: clamp(0.5rem, 0.5vw + .5rem, 0.75rem);
+
+    /*----------------- Navigation Configuration -----------------*/
+    --navigation_height: 80px;
+    --navigation_padding: 0;
+
+    /*----------------- Logo Configuration -----------------*/
+    --logo_height: var(--navigation_height);
+    --logo_width: 300px;
+    --logo_aspectRatio: 1/1;
+    --logo_imageUrl: url(../assets/common/Logo.png); /* Logo Image URL */
+
+    /* Button Settings */
+    --button_height: 45px;
+    --button_width: 100px;
+
+    --borderRadius: 20px;
+    --footer_Height: 30px;
+    --visibleScrollBarWidth: 5px;
+
+    /*----------------- Screen Dependent -----------------*/
+    --sideNav_Pos: relative;
+    --sideNav_Width: 300px;
+    --hamMenu_Display: none;
+    --scrollBarWidth: 17px;
+    --UserMenuHeight: 70px;
+    --submitWindow_Height: 50%;
+    --listHoriVerti_FlexDir: row;
+    
+}
+
+/* Disabled mobile responsive behavior - force desktop layout
+@media only screen and (min-width: 200px) and (max-width: 860px)  {
+    :root {
+        --sideNav_Pos: absolute;
+        --sideNav_Width: 0px;
+        --hamMenu_Display: grid;
+        --submitWindow_Height: 90%;
+        --listHoriVerti_FlexDir: column;
+    }
+}
+*/
+
+/*------------------ Global Settings --------------------*/
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar { display: none; }
+    
+body {
+    display: grid;
+        height: 100vh;                  /* Backup Height */
+        height: 100svh;                 /* Main Height in small view port units */ 
+        width: 100vw;
+    background: var(--Color1);
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Montserrat', sans-serif; */
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-family: "Open Sans", sans-serif; */
+    font-family: "Inter", sans-serif;
+    color: var(--fontColor1);
+    overflow: hidden;
+}
+
+label {
+    text-indent: 10px;
+    padding: 5px 0 10px 0;
+    text-align: left;
+}
+
+input, textarea, select {
+        height: 35px;
+        width: 97%;
+    border: 1px solid var(--Color3);
+    border-radius: 5px;
+    font-size: .85rem;
+    margin: 3px;
+    text-indent: 10px;
+    outline: none;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--Color4);
+    box-shadow: 0 0 2px 2px var(--Color4);
+}
+
+input:hover:not(:focus), textarea:hover:not(:focus), select:hover:not(:focus) { border-color: var(--palette2_Color1) }
+
+input[type="checkbox"] {
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+}
+
+input[type="radio"] { width: 20px; height: 20px }
+input[type="radio"]:focus { box-shadow: none }
+
+button {
+        height: var(--button_height);
+        width: var(--button_width);
+    border: 1px solid var(--Color3);
+    background-color: var(--Color1);
+    border-radius: 5px;
+    color: var(--Color5);
+    font-size: 1rem;
+    margin: 10px;
+    cursor: pointer;
+}
+
+button[disabled] { color: var(--Color3) }
+
+/* button:not([disabled]):hover {
+border-color: var(--Color4);
+box-shadow: 0 0 2px 2px var(--Color4);
+transition: all .15s linear;
+color: var(--Color5);
+} */
+
+button:not([disabled]):active {
+    border-color: var(--Color4);
+    box-shadow: none;
+}
+
+/*------------------ Page Scrolling ------------------*/
+.snap_scroll {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.scroll_snap {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+/*------------------ Page Container ------------------*/
+
+.page {
+    position: relative;
+    display: grid;
+        height: 100vh;
+        width: 100vw;
+    place-items: center;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+/*------------------ Page Container Features ------------------*/
+
+.scroll {
+    overflow: scroll;
+}
+
+.scrollY {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.scrollX {
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.scrollXYMargin::before {
+    content: "";
+    position: absolute;
+        top: 0px;
+        right: calc(var(--visibleScrollBarWidth) - 1px);
+        height: 100%;
+        width: 30px;
+    background-color: var(--Color1);
+    z-index: 1000;
+}
+
+.scrollXYMargin > * > * {
+    min-width: calc(100% - 30px);
+}
+
+/*------------------ Element Container ------------------*/
+
+
+.container {
+    display: grid;
+        height: 100%;
+        width: 100%;
+    place-items: center;
+    isolation: isolate;
+}
+
+.wrapper {
+    position: relative;
+    display: grid;
+        height: 100%;
+        width: 100%;
+    place-items: center;
+}
+
+.cover {
+    position: relative;
+    display: grid;
+        height: fit-content;
+        width: fit-content;
+    place-items: center;
+}
+
+
+/*------------------ Element Positioning ------------------*/
+
+.header {
+    display: flex;
+        height: fit-content;
+        width: 100%;
+    flex-direction: row;
+    border-bottom: var(--Color3) solid 2px;
+    z-index: 1100;
+}
+
+.footer {
+    display: flex;
+        height: var(--footer_Height);
+        width: 100%;
+    flex-direction: row;
+}
+
+.listVerti {
+    display: flex;
+        height: 100%;
+        width: 100%;
+    flex-direction: column;
+    place-items: center;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.listHori {
+    display: flex;
+        height: 100%;
+        width: 100%;
+    flex-direction: row;
+    place-items: center;
+    isolation: isolate;
+}
+
+.listHoriVerti {
+    display: flex;
+        height: 100%;
+        width: 100%;
+    flex-direction: var(--listHoriVerti_FlexDir);
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+/*------------------ Navigation ------------------*/
+
+
+
+/* 
+1. Top Navigation Bar
+
+    HTML Structure -
+        <div class="navigation-top">
+            <nav aria-label="Main navigation">
+                <ul>
+                    <!-- Logo as home link -->
+                    <li>
+                        <a href="#Home" aria-label="Asphaltic Science - Go to homepage">
+                            <img src="./assets/common/Logo.png" alt="Logo" style="width: 60px; height: 60px; margin-right: 15px;">
+                            <span style="font-size: 1.5rem; font-weight: bold;">Company</span>
+                        </a>
+                    </li>
+                    
+                    <!-- Navigation Links -->
+                    <li><a href="#AboutUs" class="nav-link">About Us</a></li>
+                    <li><a href="#OurValues" class="nav-link">Our Values</a></li>
+                    <li><a href="#OurServices" class="nav-link">Our Services</a></li>
+                    <li><a href="#ContactUs" class="nav-link">Contact Us</a></li>
+                    <li><a href="#RequestConsultation" class="nav-button">Request Consultation</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+    Configuration Variables -
+        --navigation_height: Height of the navigation bar
+        --navigation_padding: Padding for the navigation bar
+        --palette1_Color1: Primary color for the navigation background
+        --palette1_Color2: Secondary color for hover effects
+        --Color1: Color for text and icons
+        --Color3: Color for borders and shadows
+
+*/
+.navigation-top {
+    display: grid;
+    position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: var(--navigation_height);
+    place-items: center;
+    background-color: var(--palette1_Color1);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: var(--navigation_padding);
+    z-index: 1000;
+}
+
+.navigation-top > nav {
+    display: grid;
+        height: 100%;
+        width: 100%;
+    place-items: center;
+}
+
+.navigation-top > nav > ul {
+    display: flex;
+        height: 100%;
+        width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation-top > nav > ul > li:first-child {
+    margin-right: auto;
+    padding: 0 5px;
+}
+
+.sideNavTemplate {
+    display: grid;
+        height: 100%;
+        width: 100%;
+        grid-template-columns: auto 1fr;
+}
+
+/*------------------ Navigation Elements ------------------*/
+
+/* 
+1. Navigation Links
+
+    HTML Structure -
+        <li class="nav-link">
+            <a href="#LinkName">Link Name</a>
+        </li>
+
+    Configuration Variables -
+        --fontColor1: Color of the text
+        --fontColor3: Color for hover effects
+
+2. Navigation Button
+
+    HTML Structure -
+        <li class="nav-button">
+            <a href="#ButtonLink">Button Text</a>
+        </li>
+
+    Configuration Variables -
+        --palette1_Color2: Background color for the button
+        --fontColor1: Color of the text
+*/
+
+.nav-link {
+    display: grid;
+        height: 100%;
+        width: fit-content;
+    place-items: center;
+    isolation: isolate;
+    margin: 0 5px;
+}
+
+.nav-link > a {
+    position: relative;
+    display: grid;
+        height: 100%;
+        width: 100%;
+    place-items: center;
+    white-space: nowrap;
+    transition: all 0.1s linear; 
+    color: var(--fontColor3);
+    font-size: 1.25rem;
+    font-size: var(--fontM);
+    font-weight: 600;
+    padding: 0 20px;
+    cursor: pointer;    
+}
+
+.nav-link > a::before { 
+    content: "";
+    position: absolute;
+        height: 2px;
+        width: 0;
+        top: 75%;
+        left: 50%;
+    background-color: var(--fontColor1);
+    transition: all 0.3s ease;
+}
+.nav-link > a:hover { 
+    color: var(--fontColor1); 
+}
+.nav-link > a:hover::before { 
+    width: 80%; 
+    left: 12%;
+}
+
+.nav-link[data-viewport = "true"] > a {
+    color: var(--fontColor1);
+}
+
+.nav-link[data-viewport = "true"] > a::before { 
+    width: 80%; 
+    left: 12%;
+}
+
+.nav-button {
+    display: grid;
+        height: 100%;
+        width: fit-content;
+    place-items: center;
+    isolation: isolate;
+}
+
+.nav-button > a {
+    display: grid;
+        height: 80%;
+        width: 90%;
+    place-items: center;
+    border-radius: 5px;
+    text-align: center;
+    background-color: var(--palette1_Color4);
+    color: var(--fontColor1);
+    border: 2px solid var(--palette1_Color4);
+    font-size: var(--fontS);
+    font-weight: 600;
+}
+
+.nav-button > a:hover { 
+    color: var(--fontColor1); 
+    background-color: var(--palette1_Color2);
+    border: 2px solid var(--palette1_Color2);
+
+}
+
+
+/*------------------ Elements ------------------*/
+
+
+/* 
+------------------------- LOGO ---------------------------
+1. Vertical Placement of Logo and Text
+
+    HTML Structure -
+        <div class="logo1">
+            <div class="wrapper">
+                <div></div>
+                <span>Asphaltic Science</span>
+            </div>
+        </div>
+
+    Configuration Variables -
+        --logo_height: Height of the logo
+        --logo_width: Width of the logo
+        --fontColor1: Color of the text
+        --logo_imageUrl: url(../assets/common/Logo.png); Logo Image URL
+        --logo_aspectRatio: Aspect ratio of the logo (default 1/1)
+
+2. Horizontal Placement of Logo and Text
+
+    HTML Structure -
+        <div class="logo2">
+            <div class="wrapper">
+                <img src="" alt="Logo">
+                <span>Company Name</span>
+            </div>
+        </div>
+
+    Configuration Variables -
+        --logo_height: Height of the logo
+        --logo_width: Width of the logo
+        --fontColor1: Color of the text
+        --logo_imageUrl: url(../assets/common/Logo.png); Logo Image URL
+        --logo_aspectRatio: Aspect ratio of the logo (default 1/1)
+*/
+
+.logo1, .logo2 {
+    display: grid;
+        height: var(--logo_height);
+        width: var(--logo_width);
+    color: var(--fontColor1);
+    /* border-right: 2px solid var(--palette1_Color2); */
+    justify-self: left;
+    color: var(--fontColor1);
+    overflow: hidden;
+}
+
+.logo1 > .wrapper, .logo2 > .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    isolation: isolate;
+}
+
+.logo1 > .wrapper > div, .logo2 > .wrapper > div {
+    position: relative;
+    height: 100%;
+    aspect-ratio: var(--logo_aspectRatio, 1/1);
+    background: var(--logo_imageUrl);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.logo1 > .wrapper > span {
+    font-size: clamp(1rem, 5vw, 2.5rem);
+    text-wrap: nowrap;
+    cursor: pointer;
+    letter-spacing: 100px;
+}
+
+.logo1 > .wrapper > span > span {
+    font-size: clamp(1rem, 5vw, 1.25rem);
+    letter-spacing: 100px;
+}
+
+.logo2 > .wrapper {
+    flex-direction: row!important;
+    padding-bottom: 5px;
+}
+
+.logo2 > .wrapper > span {
+    font-size: clamp(1rem, 5vw, 2.5rem);
+    text-wrap: wrap;
+    line-height: 70%;
+    align-self: end;
+    cursor: pointer;
+    letter-spacing: 3px;
+}
+
+.logo2 > .wrapper > span > span {
+    font-size: clamp(1rem, 5vw, 1.75rem);
+    cursor: pointer;
+}
+
+/* 
+------------------------- BUTTONS ---------------------------
+1. Circular Highlight Expanded to Button
+
+    HTML Structure -
+        <button class="button_1">
+            <div class="wrapper">
+                <div class="container">
+                    <div class="wrapper">
+                        <span><span>Req</span>uest&nbsp;Consultation </span>
+                        <svg width="25px" height="15px" viewBox="0 0 13 10" >
+                            <path d="M1,5 L11,5"></path> 
+                            <polyline points="8 1 12 5 8 9"></polyline> 
+                        </svg>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="wrapper">
+                        <span>Request&nbsp;Consultation </span>
+                        <svg width="25px" height="15px" viewBox="0 0 13 10" >
+                            <path d="M1,5 L11,5" style="cursor: pointer;"></path> 
+                            <polyline points="8 1 12 5 8 9" style="cursor: pointer;"></polyline> 
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </button>
+
+    Configuration Variables -
+        Req: Highlighted part of text inside circle
+        uest&nbsp;Consultation: Rest of text, use &nbsp; for spaces
+        --palette1_Color3: Main Highlight and Text Color
+        --fontColor1: Active Text Color
+        --fontL: Text Size
+*/
+
+.button_1 {
+    position: relative; 
+        height: fit-content; 
+        width: max-content;
+    background: transparent;
+    border: none;
+    isolation: isolate;
+    padding: 0;
+    margin: 0;
+}
+
+.button_1 > .wrapper {
+    display: grid;
+        grid: 1fr/ 1fr;
+}
+
+.button_1 > .wrapper > .container {
+    grid-area: 1/1/1/1;
+    padding: 0 30px 0 10px; 
+    cursor: pointer;
+}
+
+.button_1 > .wrapper > .container > .wrapper { grid: 1fr / 1fr auto }
+
+.button_1 > .wrapper> .container > .wrapper > svg {
+    fill: none; 
+    stroke-linecap: round; 
+    stroke-linejoin: round; 
+    stroke: var(--palette1_Color3); 
+    stroke-width: 2; 
+    transition: transform 0.3s ease;
+    margin: 0 20px 0 5px;
+    cursor: pointer;
+}
+
+.button_1:hover > .wrapper > .container:first-child > .wrapper > svg { transform: translateX(80%) }
+
+.button_1 > .wrapper > .container:first-child > .wrapper > span {
+    font-size: var(--fontL);
+    font-weight: 200;
+    color: var(--palette1_Color3);
+    cursor: pointer;
+}
+
+.button_1 > .wrapper > .container:first-child > .wrapper > span > span {
+    display: inline-flex;
+        width: fit-content;
+        aspect-ratio: 1/1;
+    place-items: center;
+    font-weight: 600;
+    font-size: var(--fontL);
+    background-color: var(--palette1_Color3);
+    color: var(--fontColor1);
+    border-radius: 50px;
+    padding: 10px 5px 10px 10px;
+    cursor: pointer;
+}
+
+.button_1 > .wrapper > .container:last-child {
+    position: absolute;
+        width: 0;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    place-self: start;
+}
+
+.button_1:hover > .wrapper > .container:last-child { width: 100% }
+
+.button_1 > .wrapper > .container:last-child > .wrapper {
+    background-color: var(--palette1_Color3);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.button_1 > .wrapper > .container:last-child > .wrapper > span {
+    font-size: var(--fontL);
+    font-weight: 600;
+    color: var(--fontColor1);
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.button_1 > .wrapper > .container:last-child > .wrapper > svg { stroke: var(--fontColor1) }
+
+/* 
+------------------------- SCROLL BUTTONS ---------------------------
+Arrows - 
+a. &#11167
+b. &#751
+c. &#709
+d. &#8964
+e. &#129171
+f. &#11206
+g. <svg viewBox="0 0 24 24"><path d="M12 16a1 1 0 0 1-.64-.23l-6-5a1 1 0 1 1 1.28-1.54L12 13.71l5.36-4.32a1 1 0 0 1 1.41.15 1 1 0 0 1-.14 1.46l-6 4.83A1 1 0 0 1 12 16z"></path></svg>
+
+
+1. Arrow with Tail Moving up and down
+
+    HTML Structure -
+        <a href="#AboutUs" class="scroll_button_1">
+            <div class="wrapper">
+                <svg height="30px" viewBox="0 0 13 10" style="fill: none;  stroke-linecap: round;  stroke-linejoin: round;  stroke: var(--palette1_Color3);  stroke-width: 1;  transition: transform 0.3s ease; cursor: pointer; transform: rotate(90deg); ">
+                    <path d="M1,5 L11,5" style="cursor: pointer;"></path> 
+                    <polyline points="8 1 12 5 8 9" style="cursor: pointer;"></polyline> 
+                </svg>
+            </div>
+        </a>
+
+    Configuration Variables -
+        --palette1_Color3: Hover Background Color and Arrow Color
+
+2. Arrow Gliding Down
+    
+    HTML Structure - 
+        <a href="#AboutUs" class="scroll_button_2">
+            <p>></p>
+            <p>Scroll</p>
+        </a>
+
+    Configuration Variables
+        --palatte1_Color3:
+*/
+
+/* Scroll Button 1 */
+.scroll_button_1 {
+    display: grid;
+        width: max-content; 
+        aspect-ratio: 1/1; 
+    border: none; 
+    isolation: isolate; 
+    padding: 0; 
+    margin: 0; 
+    cursor: pointer;
+}
+
+.scroll_button_1 > .wrapper { cursor: pointer }
+
+.scroll_button_1 > .wrapper > svg {
+    animation: ScrollButtonAnimation 1s ease-in-out infinite alternate;
+}
+
+.scroll_button_1:hover > .wrapper {
+    background-color: var(--palette1_Color3);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.scroll_button_1:hover > .wrapper > svg {
+    animation-play-state: paused;
+    transform: translateY(0) rotate(90deg) !important;
+    stroke: var(--fontColor1) !important;
+}
+
+/* Scroll Button 2 */
+@keyframes Button_2 {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(20px) rotate(0deg); opacity: 0; }
+}
+
+.scroll_button_2 {
+    display: grid;
+        height: fit-content;
+        width: fit-content;
+        grid: 1fr auto / 1fr;
+    color: var(--palette1_Color3);
+    /* background-color: pink; */
+}
+
+.scroll_button_2:hover { opacity: 0.5 }
+
+
+.scroll_button_2 > svg {
+    fill: var(--palette1_Color3); 
+    stroke-linecap: round; 
+    stroke-linejoin: round; 
+    stroke: var(--palette1_Color3); 
+    stroke-width: 1; 
+    animation: Button_2 2s ease-in-out infinite;
+}
+
+.scroll_button_2 > p {
+    font-size: var(--fontM);
+    /* background-color: lightgreen; */
+}
+
+
+
+/*------------------ Colors ------------------*/
+.bgColor1 { background-color: var(--palette1_Color1) }
+.bgColor2 { background-color: var(--palette1_Color2) }
+.bgColor3 { background-color: var(--palette1_Color3) }
+.bgColor4 { background-color: var(--palette1_Color4) }
+
+
+/*------------------ Font Configuration ------------------*/
+.fontXXXXL { font-size: var(--fontXXXXL); }
+.fontXXXL { font-size: var(--fontXXXL); }
+.fontXXL { font-size: var(--fontXXL); }
+.fontXL { font-size: var(--fontXL); }
+.fontL { font-size: var(--fontL); }
+.fontM { font-size: var(--fontM); }
+.fontS { font-size: var(--fontS); }
+.fontXS { font-size: var(--fontXS); }
+
+.fontWeight100 { font-weight: 100; }
+.fontWeight200 { font-weight: 200; }
+.fontWeight400 { font-weight: 400; }
+.fontWeight500 { font-weight: 500; }
+.fontWeight800 { font-weight: 800; }
+.fontWeight1000 { font-weight: 1000; }
+
+
+/*------------------ Text Configuration ------------------*/
+.textJustify { text-align: justify }
+
+.hoverColor3:hover { background-color: var(--Color3) }
+
+.flex { display: flex!important }
+.fitContent { 
+    width: fit-content; 
+    height: fit-content;
+}
+.frame {
+    /* display: grid; */
+        height: 90%;
+        width: 92.5%;
+}
+
+
+.padding30 { padding: 30px }
+.padding10 { padding: 10px }
+.sidePadding10 { padding: 0 10px 0 10px }
+.sidePadding20 { padding: 0 20px 0 20px }
+
+.hidden { visibility: hidden }
+.displayNone { display: none!important }
+
+/*------------------ Background Debug ------------------*/
+
+.red{ background-color: red }
+.blue{ background-color: lightblue }
+.green{ background-color: lightgreen }
+.pink{ background-color: lightpink }
+.grey{ background-color: lightgrey }
+.yellow{ background-color: lightyellow }
+.orange{ background-color: lightcoral }
+
+.popUp {
+    position: absolute;
+    display: none;
+    /* display: grid; */
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    place-items: center;
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    z-index: 10000;
+}
+
+.submitWindow {
+    width: var(--submitWindow_Height);
+    height: max-content;
+    justify-self: center;
+}
+
+.sideNav {
+    position: var(--sideNav_Pos);
+    display: grid;
+        height: 100%;
+        width: var(--sideNav_Width);
+        top: 0;
+        left: 0;
+    align-items: center;
+    transition: width .15s linear;
+    background-image: linear-gradient(to right, var(--palette1_Color1), var(--palette1_Color2));
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.sideNav[data-status = "active"] { width: 300px!important }
+.sideNavTab { border-left: 5px solid var(--palette1_Color1) }
+.sideNavTab[data-status = "active"], .sideNavTab:hover { background-color: var(--palette1_Color2); border-left: 5px solid var(--Color1) }
+.sideNavTab[data-enabled="false"] { color: var(--palette1_Color2) }
+
+.hamMenu {
+    display: var(--hamMenu_Display);
+        /* height: 100%; */
+        /* width: fit-content; */
+    /* padding: 0 20px 0 20px; */
+    /* background-color: red; */
+}
+
+.hamMenu > * > * {
+        height: 4px;
+        width: 30px;
+    border-radius: var(--borderRadius);
+    background-color: var(--Color2);
+    opacity: 50%;
+    margin: 5px 0 0 0;
+    transition: transform .1s linear;
+}
+
+
+.hamMenu[data-status = "active"] > .wrapper > *:nth-child(2) { transform: translate(0, 10.5px) rotate(45deg) }
+.hamMenu[data-status = "active"] > .wrapper > *:nth-child(3) { visibility: hidden }
+.hamMenu[data-status = "active"] > .wrapper > *:nth-child(4) { transform: translate(0, -10.5px) rotate(-45deg) }
+
+.dropDown {
+    position: absolute;
+        max-height: 0;
+        width: 200px; 
+        top: 100%; 
+        right: 0; 
+        transition: max-height .25s ease-in-out;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.dropDown > * > * { height: 50px }
+.dropDown > * > *:hover { background-color: var(--Color3); }
+
+/* .dropDown > * > * { 
+    height: 50px;
+    border-bottom: 1px solid var(--Color5);
+} */
+
+.dropDown[data-status = "active"] { max-height: 500px }
+
+
+.hero {
+    position: relative;
+    display: grid;
+        height: 100%;
+        width: 100%;
+    background: red;
+    align-items: center;
+    justify-items: center;
+}
+
+.hero_img {
+    position: grid;
+        height: 100%;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    background-image: url('../assets/page1/landing_image_main.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero_img h1{
+    position: relative;
+        top: 70%;
+        left: 5%;
+    color: #007876;
+    width: 50vw;
+    font-weight: 700;
+    font-size: 4vw;
+    /* background-color: pink; */
+    z-index: 1000;
+    
+}
+
+.cloud1 {
+    position: relative;
+        top: 0%;
+        left: -5%;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/page1/clouds.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* background-color: red; */
+}
+
+.cloud2 {
+    position: absolute;
+        top: 20%;
+        right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/page1/clouds.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transform: scaleX(-1);
+    /* background-color: red; */
+}
+
+/* From Uiverse.io by alexmaracinaru */ 
+#Button_1 {
+    display: block;
+    position: relative;
+        /* top: 0; */
+        /* left: 70%; */
+        width: max-content;
+  margin: 0;
+  /* padding: 1.5% 1%; */
+  /* transition: all 0.2s ease; */
+  border: none;
+  background: none;
+  cursor: pointer;
+  background-color: pink;
+  overflow: visible;
+  /* visibility: hidden; */
+}
+
+#Button_1:before {
+    /* display: block; */
+    /* position: absolute; */
+        /* content: ""; */
+    /* background-color: green; */
+
+  /* top: 0; */
+  /* left: 0; */
+    /* border-radius: 50px; */
+  /* background: #007876; */
+    /* width: 5vw; */
+    /* aspect-ratio: 1/1; */
+  /* transition: all 0.3s ease; */
+}
+
+.cta span {
+  /* position: relative; */
+  /* font-family: "Ubuntu", sans-serif; */
+  /* font-size: 1.75vw; */
+  /* font-weight: 700; */
+  /* letter-spacing: 0.05em; */
+  /* transition: none; */
+  /* color: #007876; */
+  /* color: #007876; */
+}
+
+.cta span span {
+  /* color: white; */
+}
+
+.cta span span span {
+    /* margin-right: 0.4vw; */
+}
+
+#Button_1 svg {
+  /* position: relative; */
+    /* top: 0; */
+    
+  /* transition: transform 0.3s ease; */
+}
+
+.cta:hover {
+  /* border: none; */
+  /* box-shadow: none; */
+}
+
+.cta:hover svg {
+  /* stroke: white; */
+  z-index: 1000;
+}
+
+.cta:hover span{
+  /* color: white; */
+}
+.cta:hover span span span {
+    /* margin-right: 0; */
+      /* transition: all 0s ease; */
+
+}
+.cta:hover:before {
+  /* width: 100%; */
+  /* background: #007876; */
+}
+
+.cta:hover svg {
+    /* margin-left: 5px; */
+    /* transform: translateX(8px); */
+}
+
+.cta:active {
+  /* transform: scale(0.95); */
+}

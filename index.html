@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Asphaltic Science | Experienced and Independent Asphalt Testing Services For Australian Roads</title>
+        <meta name="description" content="Asphaltic Science| Experienced and Independent Asphalt Testing Services For Australian Roads">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Permissions Policy to handle Google API warnings -->
+        <meta http-equiv="Permissions-Policy" content="unload=()">
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="./assets/common/Logo1-White.png">
+        <link rel="stylesheet" href="./styles/common.css">
+        <!-- Email.js -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    </head>
+    <body class="scrollY snap_scroll" style="overflow-x: hidden; scroll-padding-top: var(--navigation_height);">
+        <style>
+            :root {
+                --palette1_Color1: #0a5f5e;
+                --palette1_Color2: #68949A;
+                --palette1_Color3: #007876;
+                --palette1_Color4: #003736;
+                --palette1_Color5: #4B7371;
+                --palette1_Color6: rgb(173, 216, 230);
+                --palette1_Color7: #F0F7F7;
+
+                --fontColor1: #F4F6F6;
+
+                --navigation_height: 80px;
+
+                --logo_width: 250px;
+                --logo_imageUrl: url(../assets/common/Logo1-White.png);
+
+                --page2_height: 500vh;
+            }
+
+            #LoadingPage.slide-up { transform: translateY(-100vh) }
+            
+            /* Mobile Warning Styles */
+            #acceptMobileWarning:hover {
+                background-color: var(--palette1_Color2) !important;
+                transform: translateY(-2px) !important;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            }
+            
+            #acceptMobileWarning:active {
+                transform: translateY(0) !important;
+            }
+        </style>  
+        <!-- Navigation Bar -->
+        <div class="navigation-top">
+            <nav aria-label="Main navigation">
+                <ul>
+                    <!-- Logo as home link -->
+                    <li>
+                        <a href="home" aria-label="Asphaltic Science - Go to homepage">
+                            <div class="logo2">
+                                <div class="wrapper">
+                                    <div></div>
+                                    <span>A<span>sphaltic</span> S<span>cience</span></span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <!-- Navigation Links -->
+                    <li class="nav-link"><a href="2">About Us</a></li>
+                    <li class="nav-link"><a href="4">Our Values</a></li>
+                    <li class="nav-link"><a href="6">Our Services</a></li>
+                    <li class="nav-link"><a href="7">Our Team</a></li>
+                    <li class="nav-link"><a href="end">Announcements</a></li>
+                    <li class="nav-button"><a href="8">Request Consultation</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Loading Screen -->
+        <div id="LoadingPage" class="page bgColor4" style="position: fixed; top: 0; left: 0; transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); z-index: 5000;">
+            <!-- Normal Loading Counter -->
+            <div id="normalLoading" class="wrapper" style="justify-content: start; align-items: end;">
+                <div class="loading-counter" style="font-size: clamp(5rem, 10vw, 10rem); padding: 0 30px;">0%</div>
+            </div>
+            
+            <!-- Mobile Warning Message -->
+            <div id="mobileWarning" class="wrapper" style="display: none; flex-direction: column; justify-content: center; align-items: center; padding: 30px; text-align: center;">
+                <div style="background: rgba(255,255,255,0.1); border-radius: 15px; padding: 40px; max-width: 500px; backdrop-filter: blur(10px);">
+                    <h2 style="color: var(--fontColor1); margin-bottom: 20px; font-size: clamp(1.5rem, 4vw, 2.5rem);">Desktop View Required</h2>
+                    <p style="color: var(--fontColor1); margin-bottom: 30px; font-size: clamp(1rem, 2.5vw, 1.25rem); line-height: 1.5;">
+                        This website is optimized for desktop viewing. Please enable "Desktop Site" in your mobile browser for the best experience.
+                    </p>
+                    <button id="acceptMobileWarning" style="
+                        background-color: var(--palette1_Color1); 
+                        color: var(--fontColor1); 
+                        border: none; 
+                        padding: 15px 30px; 
+                        border-radius: 8px; 
+                        font-size: 1.1rem; 
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                    ">Accept</button>
+                </div>
+            </div>
+        </div>
+        <!-- Page 1 (Landing Page) -->
+        <style>
+            :root {
+                --carTrajX: calc(100vh / 2 * 1.2);
+            }
+            /* Wave Animation */
+            @keyframes waveAnimation1 {
+                0% { opacity: 1; transform: translate(0px, 0px);}
+                10% { opacity: 0.25; }
+                20% { opacity: 1; transform: translate(3px, 3px);}
+                30% { opacity: 0.25; }
+                40% { opacity: 1; transform: translate(-2px, -2px);}
+                50% { opacity: 0.25; }
+                60% { opacity: 1; transform: translate(-2px, 3px);}
+                70% { opacity: 0.25; }
+                80% { opacity: 1; transform: translate(3px, -2px);}
+                90% { opacity: 0.25; }
+                100% { opacity: 1; transform: translate(0px, 0px);}
+            }
+            @keyframes waveAnimation2 {
+                0% { opacity: 0.25;}
+                10% { opacity: 1; }
+                20% { opacity: 0.25;}
+                30% { opacity: 1; }
+                40% { opacity: 0.25;}
+                50% { opacity: 1; }
+                60% { opacity: 0.25;}
+                70% { opacity: 1; }
+                80% { opacity: 0.25;}
+                90% { opacity: 1; }
+                100% { opacity: 0.25;}
+            }
+
+            @keyframes clipParallax {
+                0% { transform: translateY(0); }
+                100% { transform: translateY(100%); }
+            }
+
+            /* Car Animation */
+            @keyframes carAnimation {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(var(--carTrajX)); }
+            }
+
+            /* Cloud Animation */
+            @keyframes cloudAnimation1 {
+                0% { transform: scale(1); }
+                100% { transform: scale(1.5); }
+            }
+
+            @keyframes cloudAnimation2 {
+                0% { transform: scaleX(-1) scale(1) translate(-10%, -5%) rotate(8deg); }
+                100% { transform: scaleX(-1) scale(1.25) translate(-15%, -5%) rotate(8deg); }
+            }
+
+            /* Scroll Button */
+            @keyframes ScrollButtonAnimation {
+                0% { transform: translateY(0) rotate(90deg); }
+                100% { transform: translateY(10px) rotate(90deg); }
+            }
+
+            
+        </style>
+        <div id="Home" class="page snap_checkpoint scroll_snap" data-checkpoint="home" data-speed="1000" style=" z-index: 1000; view-timeline-name: --section1;">
+            <div class="wrapper" style="grid: 1fr auto / 1fr; background: url('./assets/page1/landing_image_nocar_nowaves.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover; background-attachment: fixed;">
+                <!-- Waves -->
+                <div class="page" style="grid-area: 1/1/3/3; animation: clipParallax linear forwards; animation-timeline: --section1; animation-range: exit 0% exit 100%; pointer-events: none;">
+                    <div class="wrapper" style="grid: 1fr / 1fr;">
+                        <div class="wrapper" style="grid-area: 1/1/2/2; background: url('./assets/page1/waves.png'); background-repeat: no-repeat; background-position: center; background-size: cover; animation: waveAnimation1 7s linear infinite alternate; z-index: 0;"></div>
+                        <div class="wrapper" style="grid-area: 1/1/2/2; background: url('./assets/page1/waves.png'); background-repeat: no-repeat; background-position: center; background-size: cover; animation: waveAnimation2 7s linear infinite alternate; z-index: 100;"></div>
+                    </div>
+                </div>
+                <!-- Car -->
+                <div class="page" style="grid-area: 1/1/3/3;">
+                    <div class="wrapper">
+                        <div class="wrapper" style="grid-area: 1/1/2/2; background: url('./assets/page1/car.png'); background-repeat: no-repeat; background-position: center; background-size: cover; animation: carAnimation linear; animation-timeline: --section1; animation-range: exit 0% exit 100%; pointer-events: none; z-index: 0;"></div>
+                    </div>
+                </div>
+                <!-- Clouds -->
+                <div class="page" style="grid-area: 1/1/3/3;">
+                    <div class="wrapper" style="grid: 20% 1fr /1fr; background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(190, 190, 190, 0.15) 55%, rgb(256, 256, 256) 95%); overflow: hidden;">
+                        <img class="hidden-" src="./assets/common/clouds.png" alt="clouds" width="100%" style="grid-area: 2/1/3/2; align-self: end; animation: cloudAnimation1 10s ease-in-out infinite alternate;">
+                        <img class="hidden-" src="./assets/common/clouds.png" alt="clouds" width="100%" style="grid-area: 2/1/3/2; align-self: end; animation: cloudAnimation2 20s ease-in-out infinite alternate;">
+                    </div>
+                </div>
+                <!-- Content -->
+                <!-- Logo -->
+                <div class="container" style="grid-area: 1/1/2/2;">
+                    <div class="wrapper" style="place-items: start;">
+                        <div class="logo2">
+                            <div class="wrapper">
+                                <div></div>
+                                <span>A<span>sphaltic</span> S<span>cience</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hero Section -->
+                <div class="container" style="grid-area: 2/1/3/2;">
+                    <div class="wrapper" style="grid: 1fr / 1fr auto;">
+                        <!-- Hero Heading -->
+                        <div class="container" style="place-items: start; z-index: 100;">
+                            <div class="wrapper" style="width: fit-content; grid: 1fr auto auto / 1fr; padding-left: 10px; overflow: visible;">
+                                <div class="container fontXXXL" style="color: var(--palette1_Color3); font-weight: 600;">
+                                    <div class="wrapper" style="display: block; place-items: start;">
+                                        Assuring Quality.<br>Securing Safer Journeys.
+                                    </div>
+                                </div>
+                                <hr style="height: 4px; width: 100%; border: none; background-color: var(--palette1_Color4); opacity: 0.25; border-radius: 50px;">
+                                <div class="container fontL" style="color: var(--palette1_Color4); font-weight: 200;">
+                                    <div class="wrapper" style="display: block; place-items: start;">
+                                        Experienced and independent asphalt testing service for <b  style="display: inline; font-weight: 1000; color: var(--palette1_Color2);">Australian Roads</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Interactive Elements -->
+                        <div class="container">
+                            <div class="wrapper" style="grid: 2fr 1fr / 1fr;">
+                                <!-- Call to Action Button -->
+                                <div class="container">
+                                    <div class="wrapper">
+                                        <button class="button_1 contactUs">
+                                            <div class="wrapper">
+                                                <div class="container">
+                                                    <div class="wrapper">
+                                                        <span><span>Req</span>uest&nbsp;Consultation </span>
+                                                        <svg width="25px" height="15px" viewBox="0 0 13 10" >
+                                                            <path d="M1,5 L11,5"></path> 
+                                                            <polyline points="8 1 12 5 8 9"></polyline> 
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="container">
+                                                    <div class="wrapper">
+                                                        <span>Request&nbsp;Consultation </span>
+                                                        <svg width="25px" height="15px" viewBox="0 0 13 10" >
+                                                            <path d="M1,5 L11,5" style="cursor: pointer;"></path> 
+                                                            <polyline points="8 1 12 5 8 9" style="cursor: pointer;"></polyline> 
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Scroll Button -->
+                                <div class="container" style="justify-self: center; align-self: end; padding: 0px;">
+                                    <div class="wrapper">
+                                        <a href="2" class="scroll_button_2">
+                                            <svg viewBox="0 0 25 25">
+                                                <path d="M 5 5l 7.5 7.5l 7.5,-7.5l -7.5 7.5z"></path>
+                                            </svg>
+                                            <p>Scroll</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page 2 + Page 3 (About Us + Our Values) -->
+        <style>
+            :root {
+                --page2_height: 600vh;
+            }
+            
+            /* Gradient Animation */
+            @keyframes gradientReveal {
+                0%, 8% { mask-size: 0 0 , auto;}
+                30% { mask-size: 200% 200%, auto; }
+                33% { mask-size: 0 0 ,auto;}
+                70%, 100% { mask-size: 200% 200% ,auto;}
+            }
+
+            /* Cloud Curtain Animation */
+            @keyframes cloudContainer {
+                0%, 15% { display: grid }
+                20%, 32% { display: none }
+                33%, 74% { display: grid }
+                75%, 100% { display: none }
+            }
+            
+            @keyframes cloudReveal_TL {
+                0%, 15% { transform: scaleY(-1) translate(0, 0);}
+                20% {transform: scaleY(-1) translate(-30%, 30%);}
+                35% {transform: scaleY(-1) translate(0, 0);}
+                75%, 100% {transform: scaleY(-1) translate(-30%, 30%);}
+            }
+
+            @keyframes cloudReveal_BL {
+                0%, 15% { transform: rotate(10deg) translate(-5%, 5%);}
+                20% {transform: rotate(10deg) translate(-40%, 40%);}
+                35% {transform: rotate(10deg) translate(-5%, -5%);}
+                75%, 100% {transform: rotate(10deg) translate(-40%, 40%);}
+            }
+
+            @keyframes cloudReveal_TR {
+                0%, 15% { transform: scale(-1,-1) rotate(10deg) translate(5%, -5%);}
+                20% {transform: scale(-1,-1) rotate(10deg) translate(-35%, 35%);}
+                35% {transform: scale(-1,-1) rotate(10deg) translate(-5%, 5%);}
+                75%, 100% {transform: scale(-1,-1) rotate(10deg) translate(-35%, 35%);}
+            }
+
+            @keyframes cloudReveal_BR {
+                0%, 15% { transform: scaleX(-1) translate(0, 0);}
+                20% {transform: scaleX(-1) translate(-40%, 40%);}
+                35% {transform: scaleX(-1) translate(0, 0);}
+                75%, 100% {transform: scaleX(-1) translate(-40%, 40%);}
+            }
+            /* Heading 1 Animation */
+            @keyframes headingAnimation {
+                0%, 19% {
+                    transform: translateY(calc(50vh - 50% - var(--navigation_height)));
+                }
+                25%, 100% {
+                    transform: translateY(0);
+                }
+            }
+            /* Paragraph Animation */
+            @keyframes paraAnimation {
+                0%, 20% { opacity: 0;}
+                25%, 100% {opacity: 1;}
+            }
+
+            /* Page 1 Animation */
+            @keyframes page1Animation {
+                0%, 30% {opacity: 1;}
+                35%, 100% {opacity: 0;}
+            }
+
+            /* Heading 2 Animation */
+            @keyframes headingAnimation2 {
+                0%, 55% {
+                    transform: translateY(calc(50vh - 50% - var(--navigation_height)));
+                }
+                70%, 100% {
+                    transform: translateY(0);
+                }
+            }
+            /* Cards Animation */
+            @keyframes card1Animation {
+                0%, 40% { opacity: 0; transform: translateY(20%);}
+                80%, 100% { opacity: 1; transform: translateY(0);}
+            }
+
+            @keyframes card2Animation {
+                0%, 50% { opacity: 0; transform: translateY(20%);}
+                80%, 100% { opacity: 1; transform: translateY(0);}
+            }
+
+            @keyframes card3Animation {
+                0%, 60% { opacity: 0; transform: translateY(20%);}
+                80%, 100% { opacity: 1; transform: translateY(0);}
+            }
+
+            @keyframes card4Animation {
+                0%, 70% { opacity: 0; transform: translateY(20%);}
+                80%, 100% { opacity: 1; transform: translateY(0);}
+            }
+
+            /* Page 2 Animation */
+            @keyframes pageAnimation- {
+                0%, 35% {opacity: 1;}
+                42%, 100% {opacity: 0;}
+            }
+        </style>
+        <div class="page snap_checkpoint scroll_snap" data-checkpoint="1" data-speed="1000" style="view-timeline-name: --section2; height: var(--page2_height); z-index: 0; overflow: visible;">
+            <div class="wrapper" style="grid: repeat(auto-fit, 100vh) / 1fr;">
+                <!-- Background Clouds -->
+                <div class="container" style="grid-area: 1/1/7/2; z-index: 0; overflow: visible;">
+                    <div class="wrapper" style="place-items: start;">
+                        <div class="page" style="grid-area: 1/1/2/2; position: sticky; top: 0; left: 0; background: var(--palette1_Color6)">
+                            <div class="page" style="grid-area: 1/1/2/2; top: 8%; left: -10%; background-image: url(./assets/common/clouds.png); background-repeat: no-repeat; background-position: center; background-size: cover;"></div>
+                            <div class="page" style="grid-area: 1/1/2/2; top: 7%; left: 8%; background-image: url(./assets/common/clouds.png); background-repeat: no-repeat; background-position: center; background-size: cover; transform: scaleX(-1);"></div>
+                            <div class="page" style="grid-area: 1/1/2/2; top: -10%; left: -8%; background-image: url(./assets/common/clouds.png); background-repeat: no-repeat; background-position: center; background-size: cover; transform: scaleY(-1);"></div>
+                            <div class="page" style="grid-area: 1/1/2/2; top: -8%; left: 12%; background-image: url(./assets/common/clouds.png); background-repeat: no-repeat; background-position: center; background-size: cover; transform: scale(-1, -1);"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Us -->
+                <div class="container" style="grid-area: 1/1/4/2; z-index: 10; overflow: visible;">
+                    <div class="wrapper" style="place-items: start;">
+                        <div class="page" style="position: sticky; top: 0; left: 0; animation: page1Animation linear forwards; animation-timeline: --section2; animation-range: enter 0% enter 100%;">
+                            <div class="wrapper" style="grid: var(--navigation_height) auto 1fr / 25vw 1fr 25vw;">
+                                <!-- Worker Drilling -->
+                                <div class="wrapper" style="grid-area: 2/1/4/2; align-items: end; justify-items: start; animation: workerAnimation linear forwards; animation-timeline: --section2; animation-range: enter 0% enter 100%;">
+                                    <img src="./assets/page2/Drill_worker.png" alt="Drill Worker" style="max-width: 200%; min-height: 60%; align-self: end; justify-self: start; transform: translate(-5%, 5%);">
+                                </div>
+                                <!-- Worker Working -->
+                                <div class="container" style="grid-area: 2/3/4/4; object-fit: cover;">
+                                    <div class="wrapper" style="grid-area: 1/1/2/2; width: 120%; background-image: url(./assets/page2/Worker2.png); background-repeat: no-repeat; background-position: top left; background-size: cover;"></div>
+                                </div>
+                                <!-- Heading -->
+                                <div class="container" style="grid-area: 2/1/3/4; align-self: start; grid: 1fr 1fr / auto 1fr; width: fit-content; height: fit-content; animation: headingAnimation linear forwards; animation-timeline: --section2; animation-range: enter 0% enter 100%; color: var(--palette1_Color3);">
+                                    <p class="wrapper fontXXXXL" style="grid-area: 1/1/3/2; line-height: 0; font-weight: 600;">A</p>
+                                    <p class="wrapper fontXXXL" style="grid-area: 1/2/2/3; font-weight: 100; align-items: center; justify-items: start; line-height: 0; transform: translateX(-5%);">bout</p>
+                                    <p class="wrapper fontXXL" style="grid-area: 2/2/3/3;">sphaltic Science</p>
+                                </div>
+                                <!-- Content -->
+                                <div class="container" style="grid-area: 3/2/4/3; grid: auto 1fr / 1fr;">
+                                    <div class="wrapper textJustify fontS" style="place-items: start; padding: 20px 0; color: var(--palette1_Color2);  animation: paraAnimation linear forwards; animation-timeline: --section2; animation-range: enter 0% enter 100%;">
+                                        <p>
+                                            With over a decade of specialised experience, <strong style="display: inline;">Asphaltic Science</strong> proudly serves Australian clients exclusively, providing expert asphalt testing and consulting tailored to the unique requirements of Australian roads and specifications. We have successfully contributed to numerous major infrastructure projects nationwide, including specialised airport projects where we applied advanced AAA methods, highlighting our proficiency and reliability in critical applications.
+                                            <br><br>
+                                            Our highly qualified team excels in Australian Standards (AS) and Queensland methods (Q), ensuring each sampling and testing task is performed to the highest quality standards. <strong>Asphaltic Science</strong> operates around the clock, offering 24/7 availability and fly-in fly-out (FIFO) services, enabling us to efficiently cover remote, regional, and metropolitan projects across Australia without delay. This flexibility ensures timely support that never compromises project schedules.
+                                            <br><br>
+                                            We specialise in onsite core sampling, delivering precise and reliable field services. Our expertise in data analysis and modern test methods provides clear insights to guide client decisions. Beyond sampling, <strong>Asphaltic Science</strong> advises on specifications, testing strategies, and mix designs to optimise resources, ensure compliance, and achieve efficient outcomes — all with a focus on safety, reliability, and fast turnaround.
+                                            <br><br>
+                                            <strong>Asphaltic Science</strong> is committed to delivering a partnership that combines technical excellence with an approachable, client-focused service ethos. By working closely with you, we ensure that every asphalt project meets its performance goals while adhering to the highest standards for Australian road construction.
+                                        </p>    
+                                    </div>
+                                    <div class="container">
+                                        <a href="4" class="scroll_button_2">
+                                            <svg viewBox="0 0 25 25">
+                                                <path d="M 5 5l 7.5 7.5l 7.5,-7.5l -7.5 7.5z"></path>
+                                            </svg>
+                                            <p>Scroll</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- About Us Checkpoint -->
+                <div id="AboutUs" class="page snap_checkpoint scroll_snap" data-checkpoint="2" data-speed="1000" style="grid-area: 2/1/3/2; z-index: 1;">
+                    <div class="wrapper page-detector" data-page="AboutUs" style="grid: var(--navigation_height) 1fr / 30% 1fr 30%;"></div>
+                </div>
+
+                <!-- Our Values -->
+                <div class="container snap_checkpoint scroll_snap" data-checkpoint="3" data-speed="1000" style="grid-area: 3/1/7/2; isolation: isolate; z-index: 20; overflow: visible;">
+                    <div class="wrapper" style="place-items: start;">
+                        <div class="page" style="position: sticky; top: 0; left: 0; animation: page2Animation linear forwards; animation-timeline: --section2; animation-range: enter 0% enter 100%;">
+                            <div class="wrapper" style="grid: var(--navigation_height) auto 1fr auto / repeat(4, 1fr);">
+                                <!-- Heading -->
+                                <div class="container" style="grid-area: 2/1/3/5;">
+                                    <div class="wrapper">
+                                        <div class="container" style="grid-area: 2/1/3/5; grid: 1fr / repeat(4, min-content); width: min-content; height: min-content; place-items: end; animation: headingAnimation2 linear forwards; animation-timeline: --section2; animation-range: enter 0% enter 100%; color: var(--palette1_Color3);">
+                                            <p class="fontXXXXL" style="place-items: end; font-weight: 600; line-height: 80%;">V</p>
+                                            <p class="fontXXL" style="place-items: end; transform: translateX(-20%);">alues</p>
+                                            <p  class="fontXL" style="place-items: end; white-space: nowrap; font-weight: 200; padding-bottom: 5px;">Thats define us</p>
+                                        </div>
+                                    </div>
+                                </div>                                
+                                <!-- Cards -->
+                                <div class="container" style="grid-area: 3/1/4/2; animation: card1Animation linear forwards; animation-timeline: --section2; animation-range: enter 0% enter 100%;">
+                                    <div class="wrapper textJustify" style="grid: 30vh 1fr / 1fr; color: var(--palette1_Color2);">
+                                        <div class="container">
+                                            <div class="wrapper" style="background: url(./assets/page2/Part2/card1.png); background-repeat: no-repeat; background-position: center; background-size: contain;"></div>
+                                        </div>
+                                        <div class="container">
+                                            <div class="wrapper" style="grid: 10vh 1fr / 1fr; padding: 0 20px;">
+                                                <div class="container">
+                                                    <div class="wrapper">
+                                                        <p class="fontXL">Quality</p>
+                                                    </div>
+                                                </div>
+                                                <div class="container">
+                                                    <div class="wrapper">
+                                                        <p class="fontS" style="place-self: start;">
+                                                            <b>Asphaltic Science</b> is committed to delivering excellence and quality in every asphalt testing service we provide. Our dedication to precision, industry-leading standards, and continuous improvement ensures that our clients receive reliable results they can trust. 
+                                                            <br><br>
+                                                            We strive to be the benchmark of quality in Australia’s asphalt industry, reflecting our passion for superior service and outstanding outcomes.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container" style="grid-area: 3/2/4/3; animation: card2Animation linear forwards; animation-timeline: --section2; animation-range: enter 0% enter 100%;">
+                                    <div class="wrapper textJustify" style="grid: 30vh 1fr / 1fr; color: var(--palette1_Color2);">
+                                        <div class="container">
+                                            <div class="wrapper" style="background: url(./assets/page2/Part2/card2.png); background-repeat: no-repeat; background-position: center; background-size: contain;"></div>
+                                        </div>
+                                        <div class="container">
+                                            <div class="wrapper" style="grid: 10vh 1fr / 1fr; padding: 0 20px;">
+                                                <div class="container">
+                                                    <div class="wrapper">
+                                                        <p class="fontXL">Reliability</p>
+                                                    </div>
+                                                </div>
+                                                <div class="container">
+                                                    <div class="wrapper" style="place-items: start;">
+                                                        <p class="fontS">
+                                                            Here at <b>Asphaltic Science</b> we strive to provide precise and reliable asphalt testing services to ensure the quality and durability of pavement across Australia. 
+                                                            <br><br>
+                                                            With expert professionals available FIFO, we deliver testing that meets national standards and industry best practices. Our focus on accuracy and transparency helps clients make informed decisions, establishing us as a trusted partner in the asphalt industry.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container" style="grid-area: 3/3/4/4; animation: card3Animation linear forwards; animation-timeline: --section2; animation-range: enter 0% enter 100%;">
+                                    <div class="wrapper textJustify" style="grid: 30vh 1fr / 1fr; color: var(--palette1_Color2);">
+                                        <div class="container">
+                                            <div class="wrapper" style="background: url(./assets/page2/Part2/card3.png); background-repeat: no-repeat; background-position: center; background-size: contain;"></div>
+                                        </div>
+                                        <div class="container">
+                                            <div class="wrapper" style="grid: 10vh 1fr / 1fr; padding: 0 20px;">
+                                                <div class="container">
+                                                    <div class="wrapper">
+                                                        <p class="fontXL">Consistency</p>
+                                                    </div>
+                                                </div>
+                                                <div class="container">
+                                                    <div class="wrapper" style="place-items: start;">
+                                                        <p class="fontS">
+                                                            Consistency is at the heart of Asphaltic Science’s asphalt testing services. By ensuring every batch of asphalt meets strict quality standards, we help maintain uniformity and reliability throughout every project. 
+                                                            <br><br>
+                                                            This commitment to consistent testing allows contractors to optimize materials, avoid costly delays, and extend pavement life, ultimately delivering durable, safe, and cost-effective roadways across Australia.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container" style="grid-area: 3/4/4/5; animation: card4Animation linear forwards; animation-timeline: --section2; animation-range: enter 0% enter 100%;">
+                                    <div class="wrapper textJustify" style="grid: 30vh 1fr / 1fr; color: var(--palette1_Color2);">
+                                        <div class="container">
+                                            <div class="wrapper" style="background: url(./assets/page2/Part2/card4.png); background-repeat: no-repeat; background-position: center; background-size: contain;"></div>
+                                        </div>
+                                        <div class="container">
+                                            <div class="wrapper" style="grid: 10vh 1fr / 1fr; padding: 0 20px;">
+                                                <div class="container">
+                                                    <div class="wrapper">
+                                                        <p class="fontXL">Integrity</p>
+                                                    </div>
+                                                </div>
+                                                <div class="container">
+                                                    <div class="wrapper" style="place-items: start;">
+                                                        <p class="fontS">
+                                                            <b>Asphaltic Science</b> stands on a foundation of integrity—delivering asphalt testing services with complete transparency, consistency, and honesty at every stage. 
+                                                            <br><br>
+                                                            Every result, recommendation, and client interaction reflects a steadfast commitment to ethical practices and reliable standards, earning trust throughout Australia’s roads and industries.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Scroll Button -->
+                                <div class="container" style="grid-area: 4/1/5/5;">
+                                    <div class="wrapper" style="padding-bottom: 3.75%;">
+                                        <a href="5" class="scroll_button_2">
+                                            <svg viewBox="0 0 25 25">
+                                                <path d="M 5 5l 7.5 7.5l 7.5,-7.5l -7.5 7.5z"></path>
+                                            </svg>
+                                            <p>Scroll</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Our Values Checkpoint -->
+                <div id="OurValues" class="page snap_checkpoint scroll_snap" data-checkpoint="4" data-speed="1000" style="grid-area: 6/1/7/2; z-index: 1;">
+                    <div class="wrapper page-detector" data-page="OurValues" style="grid: var(--navigation_height) 1fr / 30% 1fr 30%;">
+
+                    </div>
+                </div>
+                <!-- Peak Window with Curtains -->
+                <div class="container" style="grid-area: 1/1/6/2; isolation: isolate; z-index: 100;  overflow: visible;  animation: cloudContainer linear forwards; animation-timeline: --section2; animation-range: enter 0% enter 100%;">
+                    <div class="wrapper" style="place-items: start;">
+                        <div class="page" style="grid-area: 1/1/2/2; position: sticky; top: 0; left: 0; z-index: 100;">
+                            <div class="wrapper" style="background: radial-gradient(farthest-side, var(--palette1_Color6) 80%, rgba(256,256,256,1) 95%);  animation: gradientReveal linear forwards; animation-timeline: --section2; animation-range: enter 0% enter 100%; mask: radial-gradient(farthest-side at center,rgba(0,0,0,1) 60%, rgba(0,0,0,0)) center no-repeat exclude, linear-gradient(to bottom, rgba(0,0,0,1));">
+                                <img src="./assets/common/clouds.png" width="100%" height="100%" alt="clouds" style="grid-area: 1/1/2/2; animation: cloudReveal_BL linear forwards; animation-timeline: --section2; animation-range: enter 0% enter 100%;">
+                                <img src="./assets/common/clouds.png" width="100%" height="100%" alt="clouds" style="grid-area: 1/1/2/2; animation: cloudReveal_BR linear forwards; animation-timeline: --section2; animation-range: enter 0% enter 100%;">
+                                <img src="./assets/common/clouds.png" width="100%" height="100%" alt="clouds" style="grid-area: 1/1/2/2; animation: cloudReveal_TL linear forwards; animation-timeline: --section2; animation-range: enter 0% enter 100%;">
+                                <img src="./assets/common/clouds.png" width="100%" height="100%" alt="clouds" style="grid-area: 1/1/2/2; animation: cloudReveal_TR linear forwards; animation-timeline: --section2; animation-range: enter 0% enter 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 4 + Page 5 (Service History + Our Services) -->
+        <style>
+            :root {
+                --page4_height: 200vh;
+            }
+            #Services > .wrapper > .container:last-child {
+                box-shadow: rgba(50, 50, 93, 0.5) 0px 0px 20px 10px inset;
+                /* box-shadow: var(--palette1_Color7) 0px 0px 10px 10px inset; */
+                /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
+                /* box-shadow: var(--palette1_Color7) 0px 0px 10px 5px inset; */
+                /* box-shadow: var(--palette1_Color2) 0px 30px 60px -12px inset, var(--palette1_Color7) 0px 18px 36px -18px inset; */
+                /* box-shadow: var(--palette1_Color1) 0px 48px 100px 0px; */
+                /* box-shadow: var(--palette1_Color2) 0px 5px 15px; */
+                /* box-shadow: var(--palette1_Color7) 0px 7px 29px 0px; */
+                /* background-color: pink!important; */
+            }
+
+            #Services > .wrapper > .container:last-child > .wrapper > .container:first-child > .wrapper > .container {
+                box-shadow: rgba(0, 0, 0, 0.5) 2px 5px 10px 2px;
+            }
+
+            #Services > .wrapper > .container:last-child > .wrapper > .container:first-child:hover > .wrapper > .container {
+                transform: translate(0px, 0px)!important;
+                box-shadow: rgba(0, 0, 0, 0.25) 15px 15px 15px 10px;
+            }
+
+            #Services > .wrapper > .container:first-child > .wrapper > .container:not(:first-child) {
+                transition: all 0.2s ease-in-out;
+                border-top: 3px solid #CFCFCF;
+                /* border-top: 3px solid rgba(50, 50, 93, 0.55); */
+                /* border-right: 3px solid rgba(50, 50, 93, 0.5); */
+                /* box-shadow: rgba(100, 100, 111, 1) 0px 7px 29px 0px; */
+            }
+
+            #Services > .wrapper > .container:first-child > .wrapper > .container:hover:not([data-active="true"]) {
+                box-shadow: rgba(50, 50, 93, 0.5) 5px 0px 15px 5px inset;
+                border-right: none!important;
+                /* color: var(--fontColor1); */
+                /* background-color: var(--palette1_Color3); */
+            }
+
+            #Services > .wrapper > .container:first-child > .wrapper > .container[data-active="true"] {
+                box-shadow: rgba(50, 50, 93, 0.5) 5px 0px 15px 5px inset;
+                /* color: var(--fontColor1); */
+                /* background-color: var(--palette1_Color3); */
+                border-right: none!important;
+            }
+
+            /* Our Services Page Animation */
+            @keyframes page3Animation {
+                0%, 25% { transform: translateY(150%);}
+                50% { transform: translateX(0%);}
+            }
+        </style>
+        <div class="page snap_checkpoint scroll_snap" data-checkpoint="5" data-speed="600" style="height: var(--page4_height); background-color: var(--palette1_Color4); view-timeline-name: --section3; z-index: 0; overflow: visible;">
+            <div class="wrapper" style="grid: 1fr 1fr / 1fr; place-items: start;">
+                <div class="page" style="position: sticky; top: 0; left: 0;">
+                    <div class="wrapper">
+                        <div class="container" style="grid-area: 1/1/2/2; grid: var(--navigation_height) 1fr / 1fr;">
+                            <div class="wrapper" style="grid-area: 2/1/3/2; grid: (auto-fit, 1fr) / 1fr;">
+                                <div class="container" style="grid-area: 2/1/3/2;">
+                                    <div class="wrapper" style="grid: 1fr / 1fr 1fr;">
+                                        <div class="container">
+                                            <div class="wrapper" style="place-items: start; padding-left: 20px;">
+                                                <p class="fontXXL fontWeight200">Industry Experience</p>
+                                            </div>
+                                        </div>
+                                        <div class="container">
+                                            <div class="wrapper" style="grid: 1fr / 1fr auto 20%;">
+                                                <span class="fontXXXXL fontWeight400 counter" data-speed="2000" style="justify-self: end;">10</span>
+                                                <span class="fontXL" style="align-self: start;">+</span>
+                                                <div class="container"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container" style="grid-area: 3/1/4/2; border-top: 3px solid var(--palette1_Color3);">
+                                    <div class="wrapper" style="grid: 1fr / 1fr 1fr;">
+                                        <div class="container">
+                                            <div class="wrapper" style="place-items: start; padding-left: 20px;">
+                                                <p class="fontXXL fontWeight200">Major Projects</p>
+                                            </div>
+                                        </div>
+                                        <div class="container">
+                                            <div class="wrapper" style="grid: 1fr / 1fr auto 20%;">
+                                                <span class="fontXXXXL fontWeight400 counter" data-speed="2000" style="justify-self: end;">100</span>
+                                                <span class="fontXL" style="align-self: start;">+</span>
+                                                <div class="container"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container" style="grid-area: 4/1/5/2; border-top: 3px solid var(--palette1_Color3);">
+                                    <div class="wrapper" style="grid: 1fr / 1fr 1fr;">
+                                        <div class="container">
+                                            <div class="wrapper" style="place-items: start; padding-left: 20px;">
+                                                <p class="fontXXL fontWeight200">Airport Projects</p>
+                                            </div>
+                                        </div>
+                                        <div class="container">
+                                            <div class="wrapper" style="grid: 1fr / 1fr auto 20%;">
+                                                <span class="fontXXXXL fontWeight400 counter" data-speed="2000" style="justify-self: end;">3</span>
+                                                <span class="fontXL" style="align-self: start;">+</span>
+                                                <div class="container"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container" style="grid-area: 5/1/6/2; border-top: 3px solid var(--palette1_Color3);">
+                                    <div class="wrapper" style="grid: 1fr / 2fr 1fr;">
+                                        <div class="container">
+                                            <div class="wrapper" style="justify-items: start; padding-left: 20px;">
+                                                <p class="fontXXL fontWeight400">Explore Our Comprehensive Asphalt Testing Services</p>
+                                            </div>
+                                        </div>
+                                        <!-- Scroll Button -->
+                                        <div class="container">
+                                            <div class="wrapper">
+                                                <div class="container">
+                                                    <div class="wrapper"  style="justify-items: end; padding: 0 10%;">
+                                                        <a href="6" class="scroll_button_2">
+                                                            <svg viewBox="0 0 25 25">
+                                                                <path d="M 5 5l 7.5 7.5l 7.5,-7.5l -7.5 7.5z"></path>
+                                                            </svg>
+                                                            <p style="font-size: var(--fontL) !important;">Scroll</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="Services" class="container" style="grid-area: 1/1/2/2; grid: var(--navigation_height) 1fr / 1fr; background-color: var(--palette1_Color7); color: var(--palette1_Color2); animation: page3Animation linear forwards; animation-timeline: --section3; animation-range: enter 0% enter 100%;">
+                            <div class="wrapper" style="grid-area: 2/1/3/2; grid: 1fr / 1fr 1fr;">
+                                <div class="container">
+                                    <div class="wrapper fontL fontWeight200" style="grid: repeat(auto-fit, 1fr) / 1fr;">
+                                        <div class="container" data-card="1" data-active="true" style="">
+                                            <div class="wrapper" style="justify-content: start; padding: 0 20px;">
+                                                <p>Asphalt compaction test</p>
+                                            </div>
+                                        </div>
+                                        <div class="container" data-card="2">
+                                            <div class="wrapper" style="justify-content: start; padding: 0 20px;">
+                                                <p>Asphalt density test</p>
+                                            </div>
+                                        </div>
+                                        <div class="container" data-card="3">
+                                            <div class="wrapper" style="justify-content: start; padding: 0 20px;">
+                                                <p>Asphalt straight edge test</p>
+                                            </div>
+                                        </div>
+                                        <div class="container" data-card="4">
+                                            <div class="wrapper" style="justify-content: start; padding: 0 20px;">
+                                                <p>Asphalt field testing</p>
+                                            </div>
+                                        </div>
+                                        <div class="container" data-card="5">
+                                            <div class="wrapper" style="justify-content: start; padding: 0 20px;">
+                                                <p>Asphalt testing frequency</p>
+                                            </div>
+                                        </div>
+                                        <div class="container" data-card="6">
+                                            <div class="wrapper" style="justify-content: start; padding: 0 20px;">
+                                                <p>Asphalt extraction test</p>
+                                            </div>
+                                        </div>
+                                        <div class="container" data-card="7">
+                                            <div class="wrapper" style="justify-content: start; padding: 0 20px;">
+                                                <p>Asphalt thickness test</p>
+                                            </div>
+                                        </div>
+                                        <div class="container" data-card="8">
+                                            <div class="wrapper" style="justify-content: start; padding: 0 20px;">
+                                                <p>Asphalt smoothness testing</p>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                <div class="container" style="padding: 5% 5% 0 5%;">
+                                    <div class="wrapper" style="grid: 1fr 1fr auto auto / 1fr;">
+                                        <div class="container">
+                                            <div class="wrapper" style="border: 3px solid var(--palette1_Color2); border-radius: 30px;;">
+                                                <div class="container" style="transform: translate(20px, 20px); z-index: -1; border-radius: 30px; transition: all 0.3s ease-in-out; overflow: hidden;">
+                                                    <div id="ImageSlider" class="listHori" style="transition: all 0.3s ease-in-out; ">
+                                                        <div class="container" style="flex: 0 0 100%; background: url(./assets/Page3/Card1.png); background-repeat: no-repeat; background-position: center; background-size: cover;"></div>
+                                                        <div class="container" style="flex: 0 0 100%; background: url(./assets/Page3/Card2.png); background-repeat: no-repeat; background-position: center; background-size: cover;"></div>
+                                                        <div class="container" style="flex: 0 0 100%; background: url(./assets/Page3/Card3.png); background-repeat: no-repeat; background-position: center; background-size: cover;"></div>
+                                                        <div class="container" style="flex: 0 0 100%; background: url(./assets/Page3/Card4.png); background-repeat: no-repeat; background-position: center; background-size: cover;"></div>
+                                                        <div class="container" style="flex: 0 0 100%; background: url(./assets/Page3/Card5.png); background-repeat: no-repeat; background-position: center; background-size: cover;"></div>
+                                                        <div class="container" style="flex: 0 0 100%; background: url(./assets/Page3/Card6.png); background-repeat: no-repeat; background-position: center; background-size: cover;"></div>
+                                                        <div class="container" style="flex: 0 0 100%; background: url(./assets/Page3/Card7.png); background-repeat: no-repeat; background-position: center; background-size: cover;"></div>
+                                                        <div class="container" style="flex: 0 0 100%; background: url(./assets/Page3/Card8.png); background-repeat: no-repeat; background-position: center; background-size: cover;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container">
+                                            <div class="wrapper">
+                                                <div class="container" style="overflow: hidden;">
+                                                    <div id="TextSlider" class="listHori"  style="transition: all 0.3s ease-in-out;">
+                                                        <div class="container" style="flex: 0 0 100%;">
+                                                            <div class="wrapper" style="padding: 0 20px;">
+                                                                <p class="textJustify">
+                                                                    The asphalt compaction test is for measuring how dense the asphalt mix can become in reducing the mass volume. This is to assess the durability and porousness of the substance, and how prone to grooves, channels, potholes etc.
+                                                                    <br><br>
+                                                                    Many factors affect the compaction test. These factors include the asphalt mix, the base conditions and how well it responds to rollers in the final distribution.
+                                                                    <br><br>
+                                                                    Source Asphalt Magazine
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="container" style="flex: 0 0 100%;">
+                                                            <div class="wrapper">
+                                                                <p class="textJustify">
+                                                                    The asphalt density test consists of testing the weight of material per volume. This measure not only determines the quantity of asphalt to supply but the quality of the road pavement mix. The asphalt density test finds the most durable and resilient asphalt mix for the best road surface result.
+                                                                    <br><br>
+                                                                    There are a few techniques used for accurate asphalt density testing. Techniques which are performed by specialist trained professionals like KMJ Testing. Choose us for your next project.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="container" style="flex: 0 0 100%;">
+                                                            <div class="wrapper">
+                                                                <p class="textJustify">
+                                                                    Another technical specification is the straightedge test. The straight edge test is recommended by the Department of Transport and Main Roads. The test records deviation for new asphalt works. Each completed layer must be measured for deviation with the end of the straightedge.
+                                                                    <br><br>
+                                                                    Repairs and overlays to existing road surfaces must also be tested for straightedge deviation.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="container" style="flex: 0 0 100%;">
+                                                            <div class="wrapper">
+                                                                <p class="textJustify">
+                                                                    Another site test is asphalt field testing, a density adjustment ratio and consists of 3 nuclear density gauges. These measures are according to Australian Standard AS 2891.14.
+                                                                    <br><br>
+                                                                    There are many advantages of asphalt field testing. These include ease of laid surface alterations, is non-destructive and provides immediate results.
+                                                                    <br><br>
+                                                                    Source Australian Asphalt and Pavement Association
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="container" style="flex: 0 0 100%;">
+                                                            <div class="wrapper">
+                                                                <p class="textJustify">
+                                                                    The Department of Transport and Main Roads dictates frequency testing for any of its road base builds. According to TMR the frequency depends on the quantity of asphalt supplied in tonnes.
+                                                                    <br><br>
+                                                                    Asphalt testing frequency is also specified in asphalt production per mix design. Some mixes have been tested to conform with standards and can be used with reduced testing frequency.
+                                                                    <br><br>
+                                                                    Asphaltic Science Testing uses these specifications for its asphalt testing frequency. We test graded roads and heavy duty pavements to ensure compliance with standards.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="container" style="flex: 0 0 100%;">
+                                                            <div class="wrapper">
+                                                                <p class="textJustify">
+                                                                    There are a few asphalt extraction test methods. The solvent extraction test consisting of separating the substances to test the bitumen binder. Bitumen is a liquid binder, not the asphalt itself.
+                                                                    <br><br>
+                                                                    For the process of solvent asphalt extraction test, equipment includes solvent, bowl, container and oven in a well ventilated and explosion protected premises. The aggregate is mixed to stir up and evenly spread the solvent and dissolve through the bitumen. It is then left to stand to absorb the mix. The extraction fluid is then measured for concentration.
+                                                                    <br><br>
+                                                                    This combination of bitumen and asphalt produces a sleek, long lasting and sturdy surface for heavy duty roads. If this is your preference, we can complete this test requirement for you.
+                                                                    <br><br>
+                                                                    Source Pavetrend and Main Roads WA
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="container" style="flex: 0 0 100%;">
+                                                            <div class="wrapper">
+                                                                <p class="textJustify">
+                                                                    The asphalt thickness test is important. It allows contractors to achieve the desired road, runway, pavement, tunnel, slab thickness required for the job. Without it the structure or surface can be compromised.
+                                                                    <br><br>
+                                                                    One of the ways to perform this test is a MIT scan test based on reflectors. This is the most non-invasive technical measure using construction technology. To aide in efficiency of the project completion, this type of asphalt thickness test can be done at the site. Testing as soon as the mix has been spread.
+                                                                    <br><br>
+                                                                    The thickness of the asphalt determines the maximum load requirements and binders used. We can assess and recommend the thickness and perform the testing required for your project.
+                                                                    <br><br>
+                                                                    Source Asphalt Institute
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="container" style="flex: 0 0 100%;">
+                                                            <div class="wrapper">
+                                                                <p class="textJustify">
+                                                                    Asphalt is multipurpose which means the applications for use are unique. These various applications require different tests for the best outcome. Modern asphalt mixes provide aesthetics and sustainability. Its practical uses must be considered.
+                                                                    <br><br>
+                                                                    Asphalt smoothness testing to assess the mix design and finished performance. This enhances the appeal of footpaths, bike ways, dining precincts, landscape architecture and more. Asphalt smoothness testing consists of analysis using lasers.
+                                                                    <br><br>
+                                                                    We can help with your assessment needs.
+                                                                    <br><br>
+                                                                    Source Australian Asphalt Pavement Association
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container">
+                                            <div class="wrapper">
+                                                <!-- Call to Action Button -->
+                                                <div class="container">
+                                                    <div class="wrapper">
+                                                        <button class="button_1 contactUs">
+                                                            <div class="wrapper">
+                                                                <div class="container">
+                                                                    <div class="wrapper">
+                                                                        <span><span>Req</span>uest&nbsp;Consultation </span>
+                                                                        <svg width="25px" height="15px" viewBox="0 0 13 10" >
+                                                                            <path d="M1,5 L11,5"></path> 
+                                                                            <polyline points="8 1 12 5 8 9"></polyline> 
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="container">
+                                                                    <div class="wrapper">
+                                                                        <span>Request&nbsp;Consultation </span>
+                                                                        <svg width="25px" height="15px" viewBox="0 0 13 10" >
+                                                                            <path d="M1,5 L11,5" style="cursor: pointer;"></path> 
+                                                                            <polyline points="8 1 12 5 8 9" style="cursor: pointer;"></polyline> 
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Scroll Button -->
+                                        <div class="container">
+                                            <div class="wrapper" style="padding: 20px 0;">
+                                                <a href="7" class="scroll_button_2">
+                                                    <svg viewBox="0 0 25 25">
+                                                        <path d="M 5 5l 7.5 7.5l 7.5,-7.5l -7.5 7.5z"></path>
+                                                    </svg>
+                                                    <p>Scroll</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Our Services Checkpoint -->
+                <div id="OurServices" class="page snap_checkpoint scroll_snap" data-checkpoint="6" data-speed="2000" style="grid-area: 2/1/3/2; z-index: -1;">
+                    <div class="wrapper page-detector" data-page="OurServices"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 6 (Our Team) -->
+        <style>
+            /* Our Team Page Animation */
+            @keyframes headingAnimation_OurTeam {
+                0% { transform: translateX(100%); opacity: 0;}
+                50% { transform: translateX(0%); opacity: 1;}
+            }
+
+            @keyframes card1Animation_OurTeam {
+                0%, 5% { opacity: 0;}
+                50%, 100% { opacity: 1;}
+            }
+
+            @keyframes card2Animation_OurTeam {
+                0%, 5% { opacity: 0; transform: translateY(20%);}
+                50%, 100% { opacity: 1; transform: translateY(0%);}
+            }
+
+            @keyframes card3Animation_OurTeam {
+                0%, 10% { opacity: 0; transform: translateY(25%);}
+                50%, 100% { opacity: 1; transform: translateY(0%);}
+            }
+
+            @keyframes card4Animation_OurTeam {
+                0%, 25% { opacity: 0; transform: translateY(30%);}
+                50%, 100% { opacity: 1; transform: translateY(0%);}
+            }
+        </style>
+        <div id="OurTeam" class="page snap_checkpoint scroll_snap" data-checkpoint="7" data-speed="1000" style="view-timeline-name: --section4;">
+            <div class="wrapper page-detector" data-page="OurTeam" style="grid: var(--navigation_height) 1fr / 1fr;  background-color: var(--palette1_Color7);">
+                <div class="container" style="grid-area: 2/1/3/2;">
+                    <div class="wrapper" style="grid: auto 1fr auto / 1fr;">
+                        <!-- Heading -->
+                         <div class="container">
+                            <div class="wrapper">
+                                <div class="container" style="grid: 1fr / repeat(3, max-content); width: min-content; height: min-content; place-self: start; place-items: end; color: var(--palette1_Color2); padding-bottom: 10px;  animation: headingAnimation_OurTeam linear forwards; animation-timeline: --section4; animation-range: enter 0% enter 100%;">
+                                    <p class="fontXXXXL" style="place-items: end; font-weight: 600; line-height: 80%;">M</p>
+                                    <p class="fontXXL" style="place-items: end;">eet</p>
+                                    <p class="fontXXL" style="place-items: end; padding-left: 20px;">the team</p>
+                                </div>
+                            </div>
+                         </div>
+                        
+                        <!-- Team Cards -->
+                        <div class="container" style="padding:10px">
+                            <div class="wrapper" style="grid: 1fr / repeat(auto-fit, minmax(200px, 1fr)); column-gap: 5px;">
+                                <!-- Employee Cards -->
+                                <div class="container" style="animation: card1Animation_OurTeam linear forwards; animation-timeline: --section4; animation-range: enter 0% enter 100%;">
+                                    <div class="wrapper" style="grid: 1fr 1fr / 1fr;">
+                                        <div class="container">
+                                            <div class="wrapper" style="background: url(./assets/Page6/1.png); background-repeat: no-repeat; background-position: center; background-size: cover;"></div>
+                                        </div>
+                                        <div class="container">
+                                            <div class="wrapper" style="grid: auto 1fr / 1fr; color: var(--palette1_Color2); place-items: start; padding: 10px;">
+                                                <p class="fontXL" style="padding-bottom: 10px;">Name</p>
+                                                <p class="fontM textJustify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, consectetur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, nostrum?</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container" style="animation: card2Animation_OurTeam linear forwards; animation-timeline: --section4; animation-range: enter 0% enter 100%;">
+                                    <div class="wrapper" style="grid: 1fr 1fr / 1fr;">
+                                        <div class="container">
+                                            <div class="wrapper" style="background: url(./assets/Page6/2.jpg); background-repeat: no-repeat; background-position: center; background-size: cover;"></div>
+                                        </div>
+                                        <div class="container">
+                                            <div class="wrapper" style="grid: auto 1fr / 1fr; color: var(--palette1_Color2); place-items: start; padding: 10px;">
+                                                <p class="fontXL" style="padding-bottom: 10px;">Name</p>
+                                                <p class="fontM textJustify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, consectetur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, nostrum?</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container" style="animation: card3Animation_OurTeam linear forwards; animation-timeline: --section4; animation-range: enter 0% enter 100%;">
+                                    <div class="wrapper" style="grid: 1fr 1fr / 1fr;">
+                                        <div class="container">
+                                            <div class="wrapper" style="background: url(./assets/Page6/3.jpg); background-repeat: no-repeat; background-position: center; background-size: cover;"></div>
+                                        </div>
+                                        <div class="container">
+                                            <div class="wrapper" style="grid: auto 1fr / 1fr; color: var(--palette1_Color2); place-items: start; padding: 10px;">
+                                                <p class="fontXL" style="padding-bottom: 10px;">Name</p>
+                                                <p class="fontM textJustify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, consectetur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, nostrum?</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container" style="animation: card4Animation_OurTeam linear forwards; animation-timeline: --section4; animation-range: enter 0% enter 100%;">
+                                    <div class="wrapper" style="grid: 1fr 1fr / 1fr;">
+                                        <div class="container">
+                                            <div class="wrapper" style="background: url(./assets/Page6/4.jpg); background-repeat: no-repeat; background-position: center; background-size: cover;"></div>
+                                        </div>
+                                        <div class="container">
+                                            <div class="wrapper" style="grid: auto 1fr / 1fr; color: var(--palette1_Color2); place-items: start; padding: 10px;">
+                                                <p class="fontXL" style="padding-bottom: 10px;">Name</p>
+                                                <p class="fontM textJustify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, consectetur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, nostrum?</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container" style="grid-area: 5/1/6/2;">
+                            <div class="wrapper" style="padding-bottom: 3.75%;">
+                                <a href="8" class="scroll_button_2">
+                                    <svg viewBox="0 0 25 25">
+                                        <path d="M 5 5l 7.5 7.5l 7.5,-7.5l -7.5 7.5z"></path>
+                                    </svg>
+                                    <p>Scroll</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 7 (Contact Us) -->
+        <div class="page snap_checkpoint scroll_snap" data-checkpoint="8" data-speed="600">
+            <div class="wrapper" style="grid: var(--navigation_height) 1fr auto / 1fr; background-color: var(--palette1_Color7);">
+                <div class="container" style="grid-area: 2/1/3/2; padding: 5%">
+                    <div class="wrapper" style="grid: 1fr / 1fr 1fr; background-color: white; border-radius: 30px; overflow: hidden; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                        <div class="container" style="padding: 10px;">
+                            <form id="contactForm" action="" class="wrapper" style="grid: auto 1fr / 1fr; color: var(--palette1_Color2);">
+                                <div class="container">
+                                    <div class="wrapper" style="grid: 1fr 1fr / 1fr;">
+                                        <div class="container">
+                                            <div class="wrapper fontXL" style="place-items: start;">
+                                                <p>Get in Touch</p>
+                                            </div>
+                                        </div>
+                                        <div class="container">
+                                            <div class="wrapper fontM"  style="place-items: start;">
+                                                <p>Fill out the form below to request consultation</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="container fontM">
+                                    <li class="container">
+                                        <div class="wrapper" style="grid: auto 1fr / 1fr; justify-items: start;">
+                                            <label for="Name">Name*</label>
+                                            <input type="text" id="Name" name="Name" required>
+                                        </div>
+                                    </li>
+                                    <li class="container">
+                                        <div class="wrapper" style="grid: 1fr 1fr / 1fr; justify-items: start;">
+                                            <label for="Email">Email*</label>
+                                            <input type="text" id="Email" name="Email" required>
+                                        </div>
+                                    </li>
+                                    <li class="container">
+                                        <div class="wrapper" style="grid: 1fr 1fr / 1fr; justify-items: start;">
+                                            <label for="ContactNumber">Contact Number*</label>
+                                            <input type="text" id="ContactNumber" name="ContactNumber" required>
+                                        </div>
+                                    </li>
+                                    <li class="container">
+                                        <div class="wrapper" style="grid: 1fr auto / 1fr; justify-items: start;">
+                                            <label for="Message">Message</label>
+                                            <textarea id="Message" name="Message" rows="10" cols="30" style="height: 100%;"></textarea>
+                                        </div>
+                                    </li>
+                                    <li class="container">
+                                        <div class="wrapper"  style="place-items: start; padding: 10% 0 0 0;">
+                                            <button>Submit</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        <div class="container">
+                            <div class="wrapper">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.123456789!2d-74.005974!3d40.712776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjAiTiA3NMKwMDAnMjEuNSJX!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" 
+                                    width="100%" 
+                                    height="100%" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 8 (Announcements & Footer) -->
+        <div id="Announcement" class="page snap_checkpoint scroll_snap" data-checkpoint="end" data-speed="600">
+            <div class="wrapper page-detector" data-page="Announcement" style="grid: var(--navigation_height) 1fr 50px / 1fr;  background-color: var(--palette1_Color4);">
+                <div class="container" style="grid-area: 2/1/3/2;">
+                    <div class="wrapper" style="grid: auto 1fr / 1fr;">
+                        <!-- Heading -->
+                        <div class="container" style="grid: 1fr / repeat(2, min-content); width: min-content; height: min-content; place-self: start; place-items: end; color: var(--palette1_Color3); padding-bottom: 10px;">
+                            <p class="fontXXXXL" style="place-items: end; font-weight: 600; line-height: 80%;">A</p>
+                            <p class="fontXXL" style="place-items: end;">nnouncements</p>
+                        </div>
+                        <!-- Announcements -->
+                         <div class="container">
+                            <div class="wrapper" style="grid: auto / 1fr; place-items: start;">
+                                <div class="container" style="max-height: 200px; border: 3px solid var(--palette1_Color5); color: var(--palette1_Color2); padding: 0 2.5%;">
+                                    <div class="wrapper" style="grid: auto auto / 1fr 1fr;">
+                                        <p class="fontXXXL fontWeight200" style="grid-area: 1/1/2/2; justify-self: start;">Coming Soon</p>
+                                        <p class="fontXL" style="grid-area: 1/2/2/3; justify-self: end;">Asphaltic Science Lab Equipment</p>
+                                        <p class="fontS fontWeight200" style="grid-area: 2/1/3/3;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam accusamus ea consequuntur ut non id, placeat veritatis iste at corporis labore magni molestias laborum, aliquid quaerat obcaecati soluta et deserunt! Amet quo beatae maxime earum alias optio qui consectetur voluptas provident quam, saepe cum pariatur atque non corrupti. Laborum commodi natus obcaecati suscipit earum ab, ullam quae placeat delectus corrupti vel quis minima sit porro veritatis expedita aut sint saepe quaerat, tenetur sapiente corporis est esse totam. Explicabo consequatur atque laboriosam totam quo libero optio accusantium dignissimos rerum amet nostrum, ratione aperiam delectus quasi, cumque, fuga quia repellendus blanditiis a?</p>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+                <div class="container" style="grid-area: 3/1/4/2;">
+                    <div class="wrapper" style="grid: 1fr / 1fr 1fr; background-color: var(--palette1_Color1); color: var(--palette1_Color7);">
+                        <div class="container">
+                            <div class="wrapper" style="justify-items: start; padding-left: 20px;">
+                                <p>All rights reserved by Asphaltic Science</p>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="wrapper" style="justify-items: end; padding-right: 20px;">
+                                <p>Website by <a href="" target="" style="cursor: pointer; text-decoration: none; color: inherit;">Saarthak Batra</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="./scripts/main.js" defer type="module"></script>
+    </body>
+</html>
