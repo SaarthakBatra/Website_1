@@ -1,66 +1,66 @@
 const DEBUG = true;
 
 // Force Desktop Mode - Override mobile behaviors
-class ForceDesktopMode {
-    constructor() {
-        this.init();
-    }
+// class ForceDesktopMode {
+//     constructor() {
+//         this.init();
+//     }
     
-    init() {
-        // Override viewport meta tag programmatically
-        this.setDesktopViewport();
+//     init() {
+//         // Override viewport meta tag programmatically
+//         this.setDesktopViewport();
         
-        // Force desktop user agent (optional)
-        this.preventMobileDetection();
+//         // Force desktop user agent (optional)
+//         this.preventMobileDetection();
         
-        // Override touch behaviors to simulate desktop
-        this.simulateDesktopInteractions();
+//         // Override touch behaviors to simulate desktop
+//         this.simulateDesktopInteractions();
         
-        if(DEBUG) console.log('✓ ForceDesktopMode: Desktop layout forced on mobile');
-    }
+//         if(DEBUG) console.log('✓ ForceDesktopMode: Desktop layout forced on mobile');
+//     }
     
-    setDesktopViewport() {
-        // Set minimum width to force desktop layout
-        const viewportMeta = document.querySelector('meta[name="viewport"]');
-        if (viewportMeta) {
-            viewportMeta.setAttribute('content', 'width=1200, initial-scale=0.5, maximum-scale=1.0, user-scalable=yes');
-        }
-    }
+//     setDesktopViewport() {
+//         // Set minimum width to force desktop layout
+//         const viewportMeta = document.querySelector('meta[name="viewport"]');
+//         if (viewportMeta) {
+//             viewportMeta.setAttribute('content', 'width=1200, initial-scale=0.5, maximum-scale=1.0, user-scalable=yes');
+//         }
+//     }
     
-    preventMobileDetection() {
-        // Override common mobile detection methods
-        Object.defineProperty(navigator, 'userAgent', {
-            get: function() { return 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'; }
-        });
+//     preventMobileDetection() {
+//         // Override common mobile detection methods
+//         Object.defineProperty(navigator, 'userAgent', {
+//             get: function() { return 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'; }
+//         });
         
-        // Override touch detection
-        Object.defineProperty(navigator, 'maxTouchPoints', {
-            get: function() { return 0; }
-        });
-    }
+//         // Override touch detection
+//         Object.defineProperty(navigator, 'maxTouchPoints', {
+//             get: function() { return 0; }
+//         });
+//     }
     
-    simulateDesktopInteractions() {
-        // Convert touch events to mouse events
-        document.addEventListener('touchstart', this.touchToMouse, { passive: false });
-        document.addEventListener('touchmove', this.touchToMouse, { passive: false });
-        document.addEventListener('touchend', this.touchToMouse, { passive: false });
-    }
+//     simulateDesktopInteractions() {
+//         // Convert touch events to mouse events
+//         document.addEventListener('touchstart', this.touchToMouse, { passive: false });
+//         document.addEventListener('touchmove', this.touchToMouse, { passive: false });
+//         document.addEventListener('touchend', this.touchToMouse, { passive: false });
+//     }
     
-    touchToMouse(e) {
-        const touch = e.touches[0] || e.changedTouches[0];
-        const mouseEvent = new MouseEvent(
-            e.type === 'touchstart' ? 'mousedown' : 
-            e.type === 'touchmove' ? 'mousemove' : 'mouseup',
-            {
-                clientX: touch.clientX,
-                clientY: touch.clientY,
-                bubbles: true,
-                cancelable: true
-            }
-        );
-        touch.target.dispatchEvent(mouseEvent);
-    }
-}
+//     touchToMouse(e) {
+//         const touch = e.touches[0] || e.changedTouches[0];
+//         const mouseEvent = new MouseEvent(
+//             e.type === 'touchstart' ? 'mousedown' : 
+//             e.type === 'touchmove' ? 'mousemove' : 'mouseup',
+//             {
+//                 clientX: touch.clientX,
+//                 clientY: touch.clientY,
+//                 bubbles: true,
+//                 cancelable: true
+//             }
+//         );
+//         touch.target.dispatchEvent(mouseEvent);
+//     }
+// }
 
 // Mobile Detection Utility
 class MobileDetector {
